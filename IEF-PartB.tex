@@ -146,7 +146,7 @@
 %  & \MyHead{2.5cm}{\textbf{Role of\\Partner\\Organisation}} \\
   \hline
 %  \underline{Beneficiary} & & & & & & \\\hline
-  Istituto Nazionale di Fisica Nucleare? & INFN & X & & Italy & Dipartimento di Fisica dell'Università di Cagliari? & Giulia Manca \\\hline
+  Istituto Nazionale di Fisica Nucleare? & INFN & X & & Italy & Dipartimento di Fisica dell'Università di Cagliari & Giulia Manca \\\hline
 %  \underline{Partner} \underline{Organisation} & & & & & & & \\\hline
 %  - NAME  & & & & & & & \\\hline
   \end{tabular}
@@ -157,7 +157,7 @@ This research proposal dose not have neither a partner organisation nor non-acad
 
 \vspace{30pt}
 
-\def\projectabstract{Heavy flavour mesons are excellent probes to the rich phenomenology at play in heavy ion collisions (HIC). Heavy quarks are produced in the first instants of the collision and are sensitive to the full evolution of the medium. At the Large Hadron Collider (LHC) of the European Organization for Nuclear Research (CERN), the four large experiments are analysing data from HIC. Originally designed for the study of hadrons containing $b$ or $c$ quarks in pp collisions, the LHCb specifications are also extremely well suited for the physics of HIC. This project aims at exploiting the experiment's HIC data to be taken in 2016 and 2018, on measurements much awaited by the community: the nuclear modification factors of bottomonia in pPb collisions, and of D mesons and prompt and non-prompt J/psi in PbPb collisions. The current data collected by LHCb only accedes the most peripheral (i.e. high centrality) events, where occupancies are similar to the ones of pp collisions for which LHCb has been optimised. Thanks to BeyondLHCb, a novel technique will be implemented which will allow LHCb to reach the regions of most central events where the signatures of QGP are most evident. The excellent performances of the LHCb detector and the extension of the centrality allowed by BeyondLHCb will allow LHCb to take a leading role in the HIC physics at the LHC, in direct competition to the dedicated HI experiments.}
+\def\projectabstract{Heavy flavour mesons are excellent probes to the rich phenomenology at play in heavy ion collisions (HIC). Heavy quarks are produced in the first instants of the collision and are sensitive to the full evolution of the medium. At the Large Hadron Collider (LHC) of the European Organization for Nuclear Research (CERN), all four large experiments (ALICE, ATLAS, CMS and LHCb) are analysing data from HIC. Originally designed for the study of hadrons containing b or c quarks in pp collisions, the LHCb specifications are also extremely well suited for the physics of HIC. This project aims at exploiting the experiment's HIC data to be taken in 2016 and 2018, on measurements much awaited by the community: the nuclear modification factors of bottomonia in pPb collisions, and of D mesons and prompt and non-prompt J/psi in PbPb collisions. The current data collected by LHCb only accedes the most peripheral (i.e. high centrality) events, where occupancies are similar to the ones of pp collisions for which LHCb has been optimised. Thanks to BeyondLHCb, a novel technique will be implemented which will allow LHCb to reach the regions of most central events where the signatures of QGP are most evident. The excellent performances of the LHCb detector and the extension of the centrality allowed by BeyondLHCb will allow LHCb to take a leading role in the HIC physics at the LHC, in direct competition to the dedicated HI experiments.}
 % \def\projectabstract{abc}
 \textbf{{\large Abstract [TO BE REMOVED FROM PART B]}} [currently \StrLen{\projectabstract}\ chars]\\
 \projectabstract
@@ -206,15 +206,15 @@ This research proposal dose not have neither a partner organisation nor non-acad
 \subsubsection{Introduction}
 
 % general QCD and QGP
-Relativistic heavy ion collisions (HIC) are a good laboratory for the study of quantum chromodynamics (QCD) in nuclear matter. In particular, the Quark-Gluon Plasma (QGP) can be studied, a phase of QCD in which, at sufficiently high temperature and energy density, quarks and gluons are no longer confined inside hadrons, as they are in ordinary matter. The universe is thought to have been in such a state for the few microseconds after the Big Bang, but it such extreme conditions can also be reproduced in the laboratory with HIC, currently at the Relativistic Heavy Ion Collider (RHIC, Brookhaven, USA)
+Relativistic heavy ion collisions (HIC) are an excellent laboratory for the study of quantum chromodynamics (QCD) in nuclear matter. In particular, the Quark-Gluon Plasma (QGP) can be studied, a phase of QCD in which, at sufficiently high temperature and energy density, quarks and gluons are no longer confined inside hadrons, as they are in ordinary matter. The universe is thought to have been in such a state for the few microseconds after the Big Bang, but such extreme conditions can also be reproduced in the laboratory with HIC, currently at the Relativistic Heavy Ion Collider (RHIC, Brookhaven, USA)
 and the Large Hadron Collider (LHC, CERN, Europe).
 
 % observables and quantities
-Experimentally, the production of particles is compared between ``in-vacuum'' (using proton-proton collisions, \pp) and ``in-medium'' (using HIC, \AAA), with the possible presence of a QGP. A useful quantity is the nuclear modification factor, $\raa = \frac{1}{\ncoll}{N_{\AAA}}{N_{\pp}}$, comparing the particle production yield between \pp and \AAA collisions, normalised by the number of binary collisions \ncoll. A unit \raa for a given process indicates that, in this case, the \AAA collision is equivalent to independent ``in-vacuum'' \pp collisions, while a \raa smaller (larger) than 1 points to a suppression (enhancement) of this process. The \raa can be measured as a function of the particle kinematics (transverse momentum \pt, rapidity $y$), of the collision energy \sqrtsnn, or of the centrality of the collision (an experimental quantity correlated to the impact parameter and to the number of participants \npart).
+Experimentally, the production of particles is compared between ``in-vacuum'' (using proton-proton collisions, \pp) and ``in-medium'' (using HIC, \AAA), with the possible presence of a QGP. A useful quantity is the nuclear modification factor, $\raa = \frac{1}{\ncoll}{N_{\AAA}}{N_{\pp}}$, comparing the particle production yield between \pp and \AAA collisions, normalised by the number of binary collisions \ncoll. A unit \raa for a given process indicates that, in this case, the \AAA collision is equivalent to independent ``in-vacuum'' \pp collisions, while a \raa smaller (larger) than one points to a suppression (enhancement) of this process. The \raa can be measured as a function of the particle kinematics (transverse momentum \pt, rapidity $y$), of the collision energy \sqrtsnn, or of the centrality of the collision (an experimental quantity correlated to the impact parameter and to the number of participants \npart).
 
 % onia / in QGP
 Heavy flavour (HF) mesons are one of the many available probes to this rich physics, but they are of special interest. They contain a heavy quark, charm or beauty ($Q = c$ or $b$), and can be classified into open ($Q\bar{q}$, where $q = u, d, s$ is a light quark: e.g. \D, \B mesons) and closed or hidden ($Q\bar{Q}$, also called quarkonia: e.g. \Jpsi, \psiP,  \PgUabc, $\chi_c$, $\chi_b$) heavy flavour.
-The heavy quarks in HF mesons are produced early in the collisions, making them sensitive to the full evolution of the medium. Open HF mesons are affected by jet quenching and modifications of the jet fragmentation functions, as well as energy loss. Quarkonium production in \AAA can be suppressed due to melting in the QGP (because of Debye screening of the $Q\bar{Q}$ in the QGP, with a very high colour charge density), but also enhanced with statistical recombination (when originally uncorrelated $Q$ and $\bar{Q}$ meet in the QGP and form a quarkonium), the interplay between the two being complex and very \pt- and \sqrtsnn dependent.
+The heavy quarks in HF mesons are produced early in the collisions, making them sensitive to the full evolution of the medium. Open HF mesons are affected by jet quenching and modifications of the jet fragmentation functions, as well as energy loss. Quarkonium production in \AAA can be suppressed due to melting in the QGP (because of Debye screening of the $Q\bar{Q}$ in the QGP, with a very high colour charge density), but also enhanced with statistical recombination (when originally uncorrelated $Q$ and $\bar{Q}$ meet in the QGP and form a quarkonium), the interplay between the two being complex and very \pt and \sqrtsnn dependent.
 
 % cold nuclear matter effects?
 These effects from the QGP are however not the only ones at play in HIC. Indeed, the initial state itself is different from \pp, which can be described by nuclear modifications to the parton distribution functions (PDF). Partons and hadrons can also loose energy in cold nuclear matter (CNM). Such nuclear effects, which can mimic the effects due to the presence of QGP, can be better studied in proton-ion (\pA) collisions, in which no QGP is thought to form, including \rpa measurements (defined similarly to the \raa).
@@ -229,7 +229,7 @@ has also shown interest to this data, benefiting from the unique
 specificities of its detector, especially in terms of momentum resolution or particle identification. 
 
 The LHCb detector includes a high-precision tracking system consisting of a silicon-strip vertex detector (VELO) surrounding the interaction region, a large-area silicon-strip detector located upstream of a dipole magnet with a bending power of about 4\,\tesla\meter, and three stations of silicon-strip detectors and straw drift tubes placed downstream of the magnet. The combined tracking system provides a momentum resolution with a relative uncertainty well below 1\%, and an impact parameter
- measurement with a resolution of 20\,\micro\meter\ for charged particles with large transverse momentum (\pt). Different types of charged hadrons are distinguished using information from two ring-imaging Cherenkov (RICH) detectors. Photon, electron and hadron candidates
+ measurement with a resolution of 20\,\micro\meter\ for charged particles with large transverse momentum (\pt) in pp collisions. Different types of charged hadrons are distinguished using information from two ring-imaging Cherenkov (RICH) detectors. Photon, electron and hadron candidates
 are identified by a calorimeter system
 % consisting of scintillating-pad and preshower detectors, an electromagnetic calorimeter and a hadronic calorimeter. 
 and muons by a system with multiwire proportional chambers.
@@ -239,11 +239,12 @@ and muons by a system with multiwire proportional chambers.
 
 With the upcoming heavy-ion runs from the LHC -- \ppb collisions at the end of 2016 and \pbpb at the end of 2018 --
 it is very timely to exploit the high quality data taken by LHCb. Despite the strong interest of the heavy-ion community and of the LHCb Collaboration,
-the effort is only starting, lead by a few institutions, mostly European. Many probes are left unmeasured in the existing data, by lack of manpower and despite the important
+the effort is only starting, lead by a few institutions, mostly European. Many probes are left so far unmeasured in the existing data, despite the important
 information they can provide, and this project aims at covering some of such topics. They include the \rpa of \PgUabc, and the \raa of \Dz and prompt and non-prompt \Jpsi, three measurements complementary to each other but also extending the possibilities of the other LHC experiments.
 
-% Besides, another important limitation exists at the moment in LHCb: the lack of properly optimised tracking algorithms for \pbpb collisions. 
-In addition, the lack of \PbPb collisions has up to now limited the impact of LHCb to the most peripheral events, with occupancies similar to \pp collisions for which LHCb has been designed.
+% Besides, another important limitation exists at the moment in LHCb: the lack of 
+In addition, the lack of properly optimised tracking algorithms for 
+ \PbPb collisions has up to now limited the impact of LHCb to the most peripheral events, with occupancies similar to \pp collisions for which LHCb has been designed.
 % The current tracking breaks down for the too high cluster occupancy in the VELO in \pbpb collisions, restricting the reconstruction to peripheral events only (more details in Section~\ref{sec:stateoftheart}).
 
 
@@ -325,12 +326,13 @@ The \Dz and \Jpsi analyses based on these data are currently under internal revi
 
 \begin{figure}[htb]
   \begin{center}
-    \includegraphics[width=0.48\textwidth]{plots/velo_vs_ecal.pdf}
-    \includegraphics[width=0.48\textwidth]{plots/d0_ecalbin_70_50.pdf}
+    \includegraphics[width=0.48\textwidth]{plots/ecal_in_ecal_bins.pdf}
+    \includegraphics[width=0.48\textwidth]{plots/d0_ecalbin_90_70.pdf}
 %     https://twiki.cern.ch/twiki/bin/view/LHCb/LHCbPlots2015
   \end{center}
-  \caption{Left: Number of VELO clusters as a function of the calorimeter energy. Colours represent different centrality classes.
-  Right: $\Dz \to \K\pi$ in 50-70\% \pbpb in LHCb. 
+  \caption{Left: Electromagnetic calorimeter energy distribution in 
+PbPb collisions divided into centrality classes highlighted in different colours.
+  Right: $\Dz \to \K\pi$ in 70-90\% \pbpb in LHCb. 
   \label{fig:pbpblhcb}}
 \end{figure}
 
@@ -363,7 +365,7 @@ to central \pbpb collisions.
 \end{figure}
 
 \paragraph{Tracking in central \pbpb events. }\ 
-The first objective is to be able to reconstruct central events in LHCb. Currently the experiment is only capable of reconstructing events down to approximately 50\% centrality, due to the too high cluster multiplicity in the VELO: it misses most of the hard probe cross sections (which scales as the number of collisions \ncoll rather than the number of participants \npart). This is a major stake in the LHCb \pbpb program: if this limitation would be diminished or removed, LHCb would be able to perform the same physics program in \pbpb as the other LHC experiments, in particular the ALICE muon arm which covers a similar rapidity range. LHCb already benefits from its outstanding performance in terms of particle identification, momentum resolution and access to low \pt particles. A realistic goal would be to push the tracking up to 20\,000 VELO clusters, corresponding to about 30--40\% centrality.
+The first objective is to be able to reconstruct central events in LHCb. Currently the experiment is only capable of reconstructing events down to approximately 60\% centrality, due to the too high cluster multiplicity in the VELO: it misses most of the hard probe cross sections (which scales as the number of collisions \ncoll rather than the number of participants \npart). This is a major stake in the LHCb \pbpb program: if this limitation would be diminished or removed, LHCb would be able to perform the same physics program in \pbpb as the other LHC experiments, in particular the ALICE muon arm which covers a similar rapidity range. LHCb already benefits from its outstanding performance in terms of particle identification, momentum resolution and access to low \pt particles. A realistic goal would be to push the tracking up to 20\,000 VELO clusters, corresponding to about 30--40\% centrality.
 
 In order to achieve this objective, two main paths will be followed, defined in discussion with LHCb tracking experts. The applicant will be able to benefit from his knowledge from CMS, having gone through the same kind of exercise over the past years. Indeed, he has optimised the Regional Iterative Tracking (RegIt), used to enhance the tracking efficiency in \pbpb in a region around reconstructed muons. For this, he has familiarised himself with the tracking algorithms used in CMS, and their difference between \pp and \pbpb.
 
@@ -382,7 +384,7 @@ The measurement of the same quantity by LHCb with 2013 \pPb data at $\sqrtsnn = 
 %   doi:10.1007/JHEP07(2014)094
 %   [arXiv:1405.5152 [nucl-ex]].
   }.
-Second, the much larger dataset (1.6\,\nbinv in 2013, 20\,\nbinv expected in 2016) will allow a much more precise measurement, including the access to the \PgUc (which \rpa has never been measured so far).
+Second, the much larger dataset (1.6\,\nbinv in 2013, 20\,\nbinv expected in 2016) will allow a much more precise measurement, including the access to the \PgUc (whose \rpa has never been measured so far).
 
 
 \paragraph{\pbpb data analysis: \Dz and \Jpsi. }\ 
@@ -415,7 +417,7 @@ The measurement of $\PgUabc$ in \ppb collisions will also benefit from these fea
 
 \subsubsection{Gender dimension}
 
-The applicant is male but the supervisor is female, and INFN includes about 15\% women, a number which is constantly increasing also thanks to the action of the early career and gender diversity committee recently created at LHCb. 
+The applicant is male but the supervisor is female, and INFN includes about 15\% women, a number which is constantly increasing also thanks to the action of the ``Early Career and Gender Diversity Committee'' recently created at LHCb. 
 
 \subsubsection{Interdisciplinarity}
 
@@ -464,7 +466,15 @@ The applicant's knowledge about tracking from CMS, in particular for \pbpb colli
 
 The project will also allow be beneficiary to the host's network. Besides the supervisor's strong connection with LAL Orsay, but also LLR (through Frédéric Fleuret), the applicant will keep his contacts with the CMS heavy ion groups of LLR but also other institutions. His collaboration with François Arleo, one of the authors of the energy loss model, crucial to the description of heavy flavour especially in \ppb, will also be appreciable.
 
-The INFN at Cagliari already has a ALICE and LHCb group (the latter focusing on pp collisions). The creation of a heavy-ion pole in the LHCb group, at the interface with ALICE, with the recent arrival of GM, joined by the applicant, will extend the activities in the lab and its visibility in the heavy-ion and LHCb communities.
+The INFN at Cagliari already has a ALICE and LHCb group (the latter
+focusing on pp collisions). A new heavy-ion pole has been created in the
+LHCb Italy group, with INFN Florence joining the SMOG activities - one 
+of the heavy ion working group convener in LHCb is from this institute-
+and the recent move of GM to Cagliari. The arrival of the 
+applicant will extend the activities in the lab and its visibility in
+the heavy-ion and LHCb communities as well as creating an
+interface with the ALICE and CMS italian communities.
+
 
 
 %   _       ____
@@ -538,7 +548,7 @@ and international scientific committees and thesis juries.
 % The application must show that the experienced researcher will be well integrated within the team/institution in order that all parties gain the maximum knowledge and skills from the fellowship. The nature and the quality of the research group/environment as a whole should be outlined, together with the measures taken to integrate the researcher in the different areas of expertise, disciplines, and international networking opportunities that the host could offer. }
 
 The research group in Cagliari
-will be the perfect fit where to nicely integrate the ER, from the
+will be the perfect fit where to nicely integrate the applicant, from the
 personal and professional point of view. 
 The LHCb Cagliari group has a long expertise in 
 muons both from the hardware and software 
@@ -555,27 +565,27 @@ Orsay group. The current
 version of these analyses indicate that the 
 poor performance of the PID and tracking algorithms at high occupancy 
 (thus low centrality) is the main limitation already 
-in the centrality of 60-70\%. The post-doc and one student will 
+in the centrality of 60-70\%. One post-doc and one student will 
 concentrate on the adaptation of the PID criteria
 for muons and hadrons in the busy \PbPb environment.
 In this they will benefit by the collaboration 
 with the PID convener in 
 Cagliari, who has great expertise in this area.
-If awarded the grant, the ER will concentrate on the development of 
+If awarded the grant, the applicant will concentrate on the development of 
 new tracking algorithms to perform efficiently in higher 
-occupancy events together with one PhD student. LHCb being new in the 
+occupancy events together with the other PhD student. LHCb being new in the 
 heavy ion physics community, the experiment
 will profit enormously from the experience 
-of the ER who has pioneered the heavy-ion physics 
+of the applicant who has pioneered the heavy-ion physics 
 in CMS when only a few scientists started working 
 in this area. 
-The expertise the ER has developed in the CMS 
+The expertise the applicant has developed in the CMS 
 heavy ion community could be crucial for 
 concretise the huge potential of LHCb in this 
 type of physics. 
 
 
-The ER, with long-lasting experience in heavy nuclei
+The applicant, with long-lasting experience in heavy nuclei
 collisions and large collaborations, commissioning
 of a new physics line, optimization and simulation, data analysis and track
 reconstruction, will be the focus of the activities
@@ -587,22 +597,22 @@ activities in this area.
 
 
    The experience of the other
-researchers in the group will be a very important addition to the ER
+researchers in the group will be a very important addition to the applicant
 education and will contribute to his development as independent
 researcher. At the same time, being in an already established research
-group will give the ER a better chance to pass on his previously
+group will give the applicant a better chance to pass on his previously
 acquired knowledge and skills to the INFN scientific community. 
 The international background of the supervisor and her 
 broad physics experience will ensure that the 
-ER will be inserted in a international network of 
+applicant will be inserted in a international network of 
 research groups around the world.  The
-Supervisor and the ER will draw together a career development plan,
+Supervisor and the applicant will draw together a career development plan,
 with the major accomplishments expected from this research project in
 light of short-term and long-term career objectives. Fortnightly
-meeting will be held between the Supervisor and the ER to monitor the
+meeting will be held between the Supervisor and the applicant to monitor the
 advancement and define the strategy, in order to take proper actions
 to fulfil the deadlines. Thanks to the INFN long-lasting tradition of
-international training schools, the ER will also have the chance take
+international training schools, the applicant will also have the chance take
 part to various kind of training courses in order to improve his
 skills and know-how.  
 
@@ -714,18 +724,18 @@ The applicant will be involved into events for communication to a general audien
            
 \subsection{Overall coherence and effectiveness of the work plan}
 
-In the first year of the project the ER could perform studies of \PgU production with the proton-lead sample which will be collected at the end of 2016. In this respect the ER could profit from collaborating with the supervisor who has large expertise with the \PgU analysis at LHCb. Since event occupancies are expected to be lower in \pPb than in \PbPb, this sample will be the ideal complement to the existing \PbPb sample collected in 2015, as it has fewer challenges and larger statistics. The ER could work with a PhD student on this analysis, thus refining his tutoring skills which can be pivotal in reaching the maturity for a teaching position.
+In the first year of the project the applicant could perform studies of \PgU production with the proton-lead sample which will be collected at the end of 2016. In this respect the applicant could profit from collaborating with the supervisor who has large expertise with the \PgU analysis at LHCb. Since event occupancies are expected to be lower in \pPb than in \PbPb, this sample will be the ideal complement to the existing \PbPb sample collected in 2015, as it has fewer challenges and larger statistics. The applicant could work with a PhD student on this analysis, thus refining his tutoring skills which can be pivotal in reaching the maturity for a teaching position.
 The analysis of the three \PgUn
 states in \pPb data will 
 be essential to establish the observation of 
 the suppression of this state, and disentangle CNM from QGP effects.
-Once tested on \pPb data, the ER will be able to 
+Once tested on \pPb data, the applicant will be able to 
 apply the new technique to the \PbPb data.
 LHCb is the 
 only active experiment able to separate 
 the prompt from the delayed component thanks 
-to the superb performance of the VELO
-detector. The capability of LHCb to go 
+to the superb performance of the LHCb
+detector. Its capability to go 
 down to zero transverse momentum in the 
 open charm studies, which has already been 
 proved in the pPb dataset, would be the other 
@@ -734,13 +744,13 @@ heavy nuclei collisions. Unfortunately, at the
 moment LHCb had to limit itself to the 
 analysis of peripheral events due to the 
 limitations of the tracking. Thanks to the new 
-tracking strategy developed by the ER, 
+tracking strategy developed by the applicant, 
 LHCb would be able to 
 expand the physics reach to most central 
 collisions, thus being directly competitive 
 with the ALICE experiment in the same 
 rapidity range. The impact of the work of
-the ER in this field would be enormous
+the applicant in this field would be enormous
 for the LHCb experiment and for the  
 physics community, and will contribute to 
 the categorisation of the QGP.
@@ -1279,7 +1289,7 @@ reflects the deeply rooted international scope of scientific
 collaboration in the domain of physics research. 
 Cagliari... %%FIXME
 \\\midrule
-\textbf{Role and Commitment of key persons (supervisor)} &
+\textbf{Role and Commitment of key persons (supervisor)} & %(names, title, qualifications of the main supervisor)
 The supervisor (Dr. Giulia Manca, GM) is an associate professor at the 
 University of Cagliari associated with the INFN. 
 She has previously worked with the CHORUS, CDF and ATLAS experiments, before joining LHCb.
@@ -1297,11 +1307,14 @@ heavy ion physics programme at LHCb.
 She will not aonly oversee the ER, but also take active part in the development of the project.
 \\\midrule
 \textbf{Key Research Facilities, Infrastructure and Equipment} &
+% Demonstrate that the beneficiary has sufficient facilities and infrastructure to host and/or offer a suitable environment for training and transfer of knowledge to the recruited experienced researcher
 %%FIXME
 \\\midrule
 \textbf{Independent research premises?} & The INFN has its own independent research premises.
+% Please explain the status of the beneficiary's research facilities – i.e. are they owned by the beneficiary or rented by it? Are its research premises wholly independent from other entities?
 \\\midrule
 \textbf{Previous Involvement in Research and Training Programmes} &
+% Detail any (maximum 5) relevant EU, national or international research and training actions/projects in which the beneficiary has previously participated
 The INFN was funded in 1951 and has a long-stading tradition of
 more than 60 years in research and training. Of its countless
 international activities, some of the most important research is
@@ -1314,12 +1327,14 @@ Italian Universities for undergraduate and graduate student education
 ($\sim 1000$ persons involved in INFN training activities every year).
 \\\midrule
 \textbf{Current involvement in Research and Training Programmes} &
+% Detail the EU and/or national research and training actions in which the beneficiary is currently participating
 The past INFN involvement in training and research described above
 clearly continues nowadays. The training programme will be even
 reinforced in the next years thanks to the fledgling Gran Sasso
 Science Institute, the new international doctoral facility.
 \\\midrule
 \textbf{Relevant Publications and/or research/innovation products} &
+% (Max 5) Only list items (co-)produced by the supervisor 
 %%FIXME
 \\\bottomrule
 \end{tabular}
