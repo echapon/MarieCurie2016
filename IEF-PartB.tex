@@ -22,6 +22,7 @@
 \usepackage{enumitem}
 \usepackage{amsfonts}
 \usepackage{amsmath}
+\usepackage{amssymb}
 \usepackage{wrapfig}
 \usepackage{lipsum}
 \usepackage{xstring}
@@ -217,7 +218,7 @@ Heavy flavour (HF) mesons are one of the many available probes to this rich phys
 The heavy quarks in HF mesons are produced early in the collisions, making them sensitive to the full evolution of the medium. Open HF mesons are affected by jet quenching and modifications of the jet fragmentation functions, as well as energy loss. Quarkonium production in \AAA can be suppressed due to melting in the QGP (because of Debye screening of the $Q\bar{Q}$ in the QGP, with a very high colour charge density), but also enhanced with statistical recombination (when originally uncorrelated $Q$ and $\bar{Q}$ meet in the QGP and form a quarkonium), the interplay between the two being complex and very \pt and \sqrtsnn dependent.
 
 % cold nuclear matter effects?
-These effects from the QGP are however not the only ones at play in HIC. Indeed, the initial state itself is different from \pp, which can be described by nuclear modifications to the parton distribution functions (PDF). Partons and hadrons can also loose energy in cold nuclear matter (CNM). Such nuclear effects, which can mimic the effects due to the presence of QGP, can be better studied in proton-ion (\pA) collisions, in which no QGP is thought to form, including \rpa measurements (defined similarly to the \raa).
+These effects from the QGP are however not the only ones at play in HIC. Indeed, the initial state itself is different from \pp, which can be described by nuclear modifications to the parton distribution functions (PDF). Partons and hadrons can also lose energy in cold nuclear matter (CNM). Such nuclear effects, which can mimic the effects due to the presence of QGP, can be better studied in proton-ion (\pA) collisions, in which no QGP is thought to form, including \rpa measurements (defined similarly to the \raa).
 
 % more details about the project
 
@@ -311,7 +312,7 @@ that will be ported to \pbpb collisions in this project.
 
 
 \paragraph{Nucleus-nucleus collisions in LHCb:\ }\ 
-The LHC experiment has recorded \pbpb data for the first time in 2015. At the moment, no specific optimisation of the reconstruction of such events has been performed. 
+The LHCb experiment has recorded \pbpb data for the first time in 2015. At the moment, no specific optimisation of the reconstruction of such events has been performed. 
 % The current tracking algorithms cannot cope with
 % the very high charged particle multiplicity in central \pbpb collisions: beyond 15\,000 clusters in the VELO, the event cannot be reliably reconstructed.
 % The centrality could be determined from the energy deposited in the calorimeter, showing that this number of VELO clusters correpond to a minimum currently accessible centrality of about 50-60\% (Fig.~\ref{fig:pbpblhcb} left). Despite this fact and the lack of physics results published to date on this \pbpb data, LHCb has demonstrated its hability to reconstruct clean $\Jpsi \to \mumu$ and $\Dz \to \K\pi$ signals (Fig.~\ref{fig:pbpblhcb} right) in the peripheral \pbpb available, as well as a strong ultra-peripheral \Jpsi signal.
@@ -345,8 +346,8 @@ at these much smaller centre-of-mass energies.
 \subsubsection{Overview of the action}
 
 The project will focus on heavy flavour measurements in heavy ion collisions with the LHCb experiment. $\Upsilon$ mesons will be measured in \pPb collisions (to be recorded at the end of 2016), with the expectation to measure the \rpa of the \PgUc meson for the first time in the forward acceptance of LHCb.
-\Dz and \Jpsi mesons will also be measured in \pbpb collisions (2018 data). In the case of these charmed mesons, the contributions of prompt and non-prompt production will be distinguished, a first
-down to 0 \pt in the forward acceptance of LHCb. The analysis of \pbpb data will require a significant improvement of the tracking algorithms available, so that more
+\Dz and \Jpsi mesons will also be measured in \pbpb collisions (2018 data). In the case of these charmed mesons, the contributions of prompt and non-prompt production will be distinguished, for the first time
+down to null \pt in the forward acceptance of LHCb. The analysis of \pbpb data will require a significant improvement of the tracking algorithms available, so that more
 central events can be reconstructed. This will also have a major impact on the LHCb heavy-ion program and open a new physics case for the experiment with the access
 to central \pbpb collisions.
 
@@ -369,15 +370,26 @@ The first objective is to be able to reconstruct central events in LHCb. Current
 
 In order to achieve this objective, two main paths will be followed, defined in discussion with LHCb tracking experts. The applicant will be able to benefit from his knowledge from CMS, having gone through the same kind of exercise over the past years. Indeed, he has optimised the Regional Iterative Tracking (RegIt), used to enhance the tracking efficiency in \pbpb in a region around reconstructed muons. For this, he has familiarised himself with the tracking algorithms used in CMS, and their difference between \pp and \pbpb.
 
-First, a simplified tracking will be developed, that could be run within the reach of the available computing resources, in terms of time and memory usage. Quality cuts on the track seeds will be tightened, such as the minimum number of clusters in the VELO or in the tracking stations, or the ``ghost probability'' (a variable gauging the likelihood that a track candidate is a fake). The goal is to keep the fake rate low in the very high track multiplicity of PbPb collisions, even if that means slightly loosing in terms of track efficiency, especially at very low \pt.
+\begin{wrapfigure}{r}{0.5\textwidth}
+  \begin{center}
+    \includegraphics[width=0.5\textwidth]{plots/lhcblayout.png}
+  \end{center}
+  \caption{The LHCb detector, including the Vertex Locator (VELO), and the Trigger Tracking (TT), Tracking (T) and Muon (M) stations. \label{fig:lhcb}}
+\end{wrapfigure}
 
-Second, the information from the muon stations can be used, in different ways. Muon tracks can be used as seeds, or as a substitute to tracks from the tracker stations. Here the idea is to have a higher efficiency for muons, which have a much smaller multiplicity than charged particles in general and are used for measurements involving quarkonia, for instance. 
+First, a simplified tracking will be developed, that could be run within the reach of the available computing resources, in terms of time and memory usage. It is crucial to reduce the number of seeds to be considered by the tracking algorithms. For this, the idea would be to tighten the minimum number of clusters in 
+the VELO or tracking stations during the pattern recognition (i.e. the track building state). 
+% Quality cuts on the track seeds will be tightened, such as the minimum number of clusters in the VELO or in the tracking stations, or the ``ghost probability'' (a variable gauging the likelihood that a track candidate is a fake). 
+The goal is to restrict to the best quality seeds, so that the combinatorics of patter recognition is kept at a managable level in the very high track multiplicity of PbPb collisions, even if that means slightly loosing in terms of track efficiency, especially at very low \pt. In that regard, it would also be possible to reduce the size of the search window used in pattern recognition: this would speed up reconstruction but restrict to straighter (i.e. higher \pt) tracks.
+
+Second, the information from the muon stations can be used, in different ways. Muon tracks can be used as seeds and propagated back through the tracking stations (T, see Fig.~\ref{fig:lhcb}), which will allow for smaller search windows (and ignoring the rest of the detector), compared to starting with no seed at all. The other possible (and complementary) strategy is to match VELO tracks to muon tracks, thus bypassing the T stations, which suffer much more from the high occupancy than the muon stations. Here the idea is to have a higher efficiency for muons, which have a much smaller multiplicity than charged particles in general and are used for measurements involving quarkonia, for instance. 
 
 The applicant will work on these improvements at the same time as getting familiar with the LHCb reconstruction software. Once finalised, he will propose the inclusion of his algorithms in the official LHCb reconstruction software and perform its validation on 2015 \pbpb data and simulation.
 
 
 \paragraph{\pPb data analysis: \PgUabc. }\ 
-The project also involves data analysis of the \pPb data to be taken in November 2016, at $\sqrtsnn = 8\,\TeV$. The measurement of the nuclear modification factor of upsilon mesons, $\rpa (\PgUabc)$, will be performed as it is one of the high profile analyses that can be achieved. LHCb benefits from its excellent dimuon mass resolution ($\sim 0.5\%$ below 100\,\GeVc), better than any other LHC experiment (and in particular than ALICE in the same rapidity region, $\sim 1.7\%$). %73MeV at the jpsi peak
+The project also involves data analysis of the \pPb data to be taken in November 2016, at $\sqrtsnn = 8\,\TeV$. The measurement of the nuclear modification factor of upsilon mesons, $\rpa (\PgUabc)$, will be performed as it is one of the high profile analyses that can be achieved. LHCb benefits from its excellent dimuon mass resolution ($\lesssim 0.5\%$ for $\pt < 100\,\GeVc$), % 11.55MeV for the J/psi according to p84 of https://cds.cern.ch/record/2202169/files/CERN-THESIS-2012-428_2.pdf
+better than any other LHC experiment (and in particular than ALICE in the same rapidity region, $\sim 2.4\%$). %73MeV at the jpsi peak
 The measurement of the same quantity by LHCb with 2013 \pPb data at $\sqrtsnn = 5\,\TeV$ will serve as a baseline for this data analysis. Significant improvements will be possible. First, the collision energy of $\sqrtsnn = 8\,\TeV$ will allow to use the large \pp reference dataset available at the same centre-of-mass energy, allowing for a precise mapping of the $\Upsilon$ mesons modification without having to interpolate results at other energies as had to be done with 2013 \pPb data\footnote{LHCb Collaboration,
   %``Study of $\Upsilon$ production and cold nuclear matter effects in $p$Pb collisions at $\sqrt{s_{NN}}$=5 TeV,''
   JHEP {\bf 1407} (2014) 094.
@@ -390,7 +402,7 @@ Second, the much larger dataset (1.6\,\nbinv in 2013, 20\,\nbinv expected in 201
 \paragraph{\pbpb data analysis: \Dz and \Jpsi. }\ 
 Heavy flavour physics will also be investigated in \pbpb data, taking at the same time the opportunity to profit from the improved tracking algorithms to be developed for \pbpb as mentioned above. 
 
-First, the nuclear modification factor of \Dz mesons will be measured, in the $\Dz \to \K^+\pi^-$. The same analysis techniques as used in \pPb\footnote{LHCb Collaboration, LHCb-CONF-2016-003.} will be adapted for \pbpb. Similar \Dz meson measurements are available from the ALICE and CMS experiments, but at central rapidity and, most of all, not down to 0 \pt, which only LHCb has the possibility to do. The absence of any \pt threshold is crucial as it gives direct access to the full cross section. The possibility to separate
+First, the nuclear modification factor of \Dz mesons will be measured, in the $\Dz \to \K\pi$. The same analysis techniques as used in \pPb\footnote{LHCb Collaboration, LHCb-CONF-2016-003.} will be adapted for \pbpb. Similar \Dz meson measurements are available from the ALICE and CMS experiments, but at central rapidity and, most of all, not down to 0 \pt, which only LHCb has the possibility to do. The absence of any \pt threshold is crucial as it gives direct access to the full cross section. The possibility to separate
 prompt \Dz mesons from those coming from B meson decays will also be a key ingredient, giving access to an unambiguous measurement of the prompt \Dz as well as an access to the \raa
 of B mesons.
 
@@ -597,7 +609,7 @@ activities in this area.
 
 
    The experience of the other
-researchers in the group will be a very important addition to the applicant
+researchers in the group will be a very important addition to the applicant's
 education and will contribute to his development as independent
 researcher. At the same time, being in an already established research
 group will give the applicant a better chance to pass on his previously
@@ -609,10 +621,10 @@ research groups around the world.  The
 Supervisor and the applicant will draw together a career development plan,
 with the major accomplishments expected from this research project in
 light of short-term and long-term career objectives. Fortnightly
-meeting will be held between the Supervisor and the applicant to monitor the
+meetings will be held between the Supervisor and the applicant to monitor the
 advancement and define the strategy, in order to take proper actions
 to fulfil the deadlines. Thanks to the INFN long-lasting tradition of
-international training schools, the applicant will also have the chance take
+international training schools, the applicant will also have the chance to take
 part to various kind of training courses in order to improve his
 skills and know-how.  
 
@@ -630,7 +642,7 @@ skills and know-how.
 % Describe briefly how the host will contribute to the advancement of the researcher's career. \\
 % Therefore, a complete Career Development Plan should not be included in the proposal, but it is part of implementing the action in line with the European Charter for Researchers.\\}
 
-The applicant has gained a position of expertise in several complementary areas. He has had a leading contribution to analysis of proton-antiproton data (with \DO), proton-lead and lead-lead data (with CMS), on physics topics ranging from Higgs boson searched and anomalous quartic gauge couplings (aQGC) in photon interactions to nuclear parton distribution functions (nPDF) and quarkonia. His prominent role in the CMS heavy-ion group has lead him to be appointed convener of the dilepton Physics Interest Group (PInG), counting 20 people from 7 institutions and 3 continents and gathering physicists interested in electroweak and quarkonium physics in HIC in the Collaboration.
+The applicant has gained a position of expertise in several complementary areas. He has had a leading contribution to analysis of proton-antiproton data (with \DO), proton-lead and lead-lead data (with CMS), on physics topics ranging from Higgs boson searches and anomalous quartic gauge couplings (aQGC) in photon interactions to nuclear parton distribution functions (nPDF) and quarkonia. His prominent role in the CMS heavy-ion group has lead him to be appointed convener of the dilepton Physics Interest Group (PInG), counting 20 people from 7 institutions and 3 continents and gathering physicists interested in electroweak and quarkonium physics in HIC in the Collaboration.
 
 At the same time, he has also showed interest in phenomenology, having co-signed to phenomenological papers, on aQGC and W boson production in hadronic collisions. The second article was co-signed with François Arleo, whose energy loss model for quarkonium production in HIC is one of the most predictive on the market, and Hannu Paukkunen, co-author of the most used nPDF set, EPS09. This connection could be useful in interpreting in depth upsilon production in pPb collisions, where both nPDF and energy loss are key ingredients to the modification with respect to \pp collisions.
 
@@ -660,7 +672,7 @@ take a leading role in the collaboration with the theorists in Cagliari, strengt
 % {\tiny
 % Explain the expected impact of the planned research and training on the career prospects of the experienced researcher after the fellowship. Which new competences will be acquired?}
 
-This project will bring considerable new knowledge and experience to the applicant, as exposed in Sections~\ref{sec:benefitapplicant} and \ref{sec:maturity}. Besides, both quarkonium physics and tracking are in phase with the interests of the French heavy-ion community. Quarkonium production in HIC has been studied in several laboratories, in all 3 LHC experiments represented in France for HIC: ALICE, CMS and LHCb. Regarding tracking, several of the CMS experts in tracking in HIC work or have worked at LLR, and France is deeply involved in the Muon Forward Tracker upgrade for ALICE, requiring combined tracking with the muon chambers. The supervisor has started her ERC project at LAL Orsay, and keeps a tight collaboration with this group, sharing the same interests inside the LHCb heavy ion community. This collaboration will be profitable for the project, and regular travel to LAL is anticipated. Thus, this project will allow the applicant to develop very valuable in view of obtaining a permanent position in France, which is the next step in his career.
+This project will bring considerable new knowledge and experience to the applicant, as exposed in Sections~\ref{sec:benefitapplicant} and \ref{sec:maturity}. Besides, both quarkonium physics and tracking are in phase with the interests of the French heavy-ion community. Quarkonium production in HIC has been studied in several laboratories, in all 3 LHC experiments represented in France for HIC: ALICE, CMS and LHCb. Regarding tracking, several of the CMS experts in tracking in HIC work or have worked at LLR, and France is deeply involved in the Muon Forward Tracker upgrade for ALICE, requiring combined tracking with the muon chambers. The supervisor has started her ERC project at LAL Orsay, and keeps a tight collaboration with this group, sharing the same interests inside the LHCb heavy ion community. This collaboration will be profitable for the project, and regular travel to LAL is anticipated. Thus, this project will allow the applicant to develop a very valuable experience in view of obtaining a permanent position in France, which is the next step in his career.
 
 
 
@@ -685,7 +697,7 @@ This project will bring considerable new knowledge and experience to the applica
 
 % The new tracking algorithms will be beneficial to the whole HIC group of LHCb, giving access to more central events. 
 
-First, the results from the proposal will be discussed inside the Cagliari group, as well as mini-workshops at Cagliari (possibly yearly), between the theory, ALICE and LHCb groups -- the applicant will take part to the organisation of those. The results will also be spread inside the LHCb collaboration, being presented at internal meetings (tracking and heavy ion physics). The new tracking algorithms in particular will be developed, validated and advertised with the LHCb tracking experts. They could also lead to a technical publication (for a journal such as Nuclear Instrumentation Methods), describing the novel algorithms developed, to be cited in all subsequent LHCb physics publications using this new tracking. The physics results themselves will be published in high-impact journals, possibly Physical Review Letters since they involve first-time measurements. The applicant will communicate in the main conferences in the field, such as Quark Matter or Hard Probes, about the results. Given the small size of the heavy-ion group in LHCb, participation to these major conferences will be easier than in other experiments. For the same reason, the applicant will quickly gain a very high visibility, both inside the LHCb collaboration and within the heavy-ion community.
+First, the results from the proposal will be discussed inside the Cagliari group, as well as mini-workshops at Cagliari (possibly yearly), between the theory, ALICE and LHCb groups -- the applicant will take part in the organisation of those. The results will also be spread inside the LHCb collaboration, being presented at internal meetings (tracking and heavy ion physics). The new tracking algorithms in particular will be developed, validated and advertised with the LHCb tracking experts. They could also lead to a technical publication (for a journal such as Nuclear Instrumentation Methods), describing the novel algorithms developed, to be cited in all subsequent LHCb physics publications using this new tracking. The physics results themselves will be published in high-impact journals, possibly Physical Review Letters since they involve first-time measurements. The applicant will communicate in the main conferences in the field, such as Quark Matter or Hard Probes, about the results. Given the small size of the heavy-ion group in LHCb, participation to these major conferences will be easier than in other experiments. For the same reason, the applicant will quickly gain a very high visibility, both inside the LHCb collaboration and within the heavy-ion community.
 
 
 
