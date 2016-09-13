@@ -6,6 +6,7 @@
 \usepackage{eurosym}
 \usepackage{lastpage}
 \usepackage{xspace}
+\xspaceaddexceptions{' ’}
 \usepackage[margin=15mm,includehead,includefoot]{geometry}
 \usepackage{fancyhdr}
 \usepackage{booktabs}
@@ -26,6 +27,7 @@
 \usepackage{wrapfig}
 \usepackage{lipsum}
 \usepackage{xstring}
+\usepackage[font=small]{caption}
 
 \input{newcommands.tex}
 \input{custom-definitions.tex}
@@ -137,6 +139,7 @@
 \newcommand\roty[1]{\rotatebox[origin=c]{90}{\parbox{4cm}{\raggedright\textbf{#1}}}}
 \newcommand\MyHead[2]{\multicolumn{1}{l|}{\parbox{#1}{\centering #2}}}
 
+\begin{center}
 %\resizebox{180mm}{!}{
   \noindent\begin{tabular}{|m{3.0cm}|m{2.5cm}|b{1em}|b{1em}|c|m{3.0cm}|m{3.0cm}|}
   \hline
@@ -150,18 +153,20 @@
 %  & \MyHead{2.5cm}{\textbf{Role of\\Partner\\Organisation}} \\
   \hline
 %  \underline{Beneficiary} & & & & & & \\\hline
-  Istituto Nazionale di Fisica Nucleare? & INFN & X & & Italy & Dipartimento di Fisica dell'Università di Cagliari, INFN Calgiari & Giulia Manca \\\hline
+  Istituto Nazionale di Fisica Nucleare & INFN & X & & Italy & Dipartimento di Fisica dell'Università di Cagliari,\qquad INFN Calgiari & Giulia Manca \\\hline
 %  \underline{Partner} \underline{Organisation} & & & & & & & \\\hline
 %  - NAME  & & & & & & & \\\hline
   \end{tabular}
 %}
+\end{center}
+
 \vspace{\baselineskip}
 
 This research proposal dose not have neither a partner organisation nor non-academic beneficiaries.
 
 \vspace{30pt}
 
-\def\projectabstract{Heavy flavour mesons are excellent probes to the rich phenomenology at play in heavy ion collisions (HIC). Heavy quarks are produced in the first instants of the collision and are sensitive to the full evolution of the medium. At the Large Hadron Collider (LHC) of the European Organization for Nuclear Research (CERN), all four large experiments (ALICE, ATLAS, CMS and LHCb) are analysing data from HIC. Originally designed for the study of hadrons containing b or c quarks in pp collisions, the LHCb specifications are also extremely well suited for the physics of HIC. This project aims at exploiting the experiment's HIC data to be taken in 2016 and 2018, on measurements much awaited by the community: the nuclear modification factors of bottomonia in pPb collisions, and of D mesons and prompt and nonprompt J/psi in PbPb collisions. The current data collected by LHCb only accedes the most peripheral (i.e. high centrality) events, where occupancies are similar to the ones of pp collisions for which LHCb has been optimised. Thanks to BeyondLHCb, a novel technique will be implemented which will allow LHCb to reach the regions of most central events where the signatures of QGP are most evident. The excellent performances of the LHCb detector and the extension of the centrality allowed by BeyondLHCb will allow LHCb to take a leading role in the HIC physics at the LHC, in direct competition to the dedicated HI experiments.}
+\def\projectabstract{Heavy flavour mesons are excellent probes to the rich phenomenology at play in heavy ion collisions (HIC). Heavy quarks are produced in the first instants of the collision and are sensitive to the full evolution of the medium. At the Large Hadron Collider (LHC) of the European Organization for Nuclear Research (CERN), all four large experiments (ALICE, ATLAS, CMS and LHCb) are analysing data from HIC. Originally designed for the study of hadrons containing b or c quarks in pp collisions, the LHCb specifications are extremely well suited for the physics of HIC. This project aims at exploiting the experiment's HIC data to be taken in 2016 and 2018, on measurements much awaited by the community: the nuclear modification factors of bottomonia in pPb collisions, and of D mesons and prompt and nonprompt J/psi in PbPb collisions. The current data collected by LHCb only accedes the most peripheral (i.e. high centrality) events, where occupancies are similar to the ones of pp collisions for which LHCb has been optimised. Thanks to BeyondLHCb, a novel technique will be implemented which will allow LHCb to reach the regions of most central events where the signatures of QGP are most evident. The excellent performances of the LHCb detector and the extension of the centrality allowed by BeyondLHCb will allow LHCb to take a leading role in the HIC physics at the LHC, in direct competition to the dedicated HI experiments.}
 % \def\projectabstract{abc}
 \textbf{{\large Abstract [TO BE REMOVED FROM PART B]}} [currently \StrLen{\projectabstract}\ chars]\\
 \projectabstract
@@ -210,11 +215,11 @@ This research proposal dose not have neither a partner organisation nor non-acad
 \subsubsection{Introduction}
 
 % general QCD and QGP
-Relativistic heavy ion collisions (HIC) are an excellent laboratory for the study of quantum chromodynamics (QCD) in nuclear matter. In particular, the Quark-Gluon Plasma (QGP) can be studied, a phase of QCD in which, at sufficiently high temperature and energy density, quarks and gluons are no longer confined inside hadrons, as they are in ordinary matter. The universe is thought to have been in such a state for the few microseconds after the Big Bang, but such extreme conditions can also be reproduced in the laboratory with HIC, currently at the Relativistic Heavy Ion Collider (RHIC, Brookhaven, USA)
+Relativistic heavy ion collisions (HIC) are an excellent laboratory for the study of quantum chromodynamics (QCD) in nuclear matter. In particular, the Quark-Gluon Plasma (QGP) can be studied, a phase of QCD in which, at sufficiently high temperature and energy density, quarks and gluons are no longer confined inside hadrons, as they are in ordinary matter. The universe is thought to have been in such a state for the few instants after the Big Bang, but such extreme conditions can also be reproduced in the laboratory with HIC, currently at the Relativistic Heavy Ion Collider (RHIC, Brookhaven, USA)
 and the Large Hadron Collider (LHC, CERN, Europe).
 
 % observables and quantities
-Experimentally, the production of particles is compared between ``in-vacuum'' (using proton-proton collisions, \pp) and ``in-medium'' (using HIC, \AAA), with the possible presence of a QGP. A useful quantity is the nuclear modification factor, $\raa = \frac{1}{\ncoll}{N_{\AAA}}{N_{\pp}}$, comparing the particle production yield between \pp and \AAA collisions, normalised by the number of binary collisions \ncoll. A unit \raa for a given process indicates that, in this case, the \AAA collision is equivalent to independent ``in-vacuum'' \pp collisions, while a \raa smaller (larger) than one points to a suppression (enhancement) of this process. The \raa can be measured as a function of the particle kinematics (transverse momentum \pt, rapidity $y$), of the collision energy \sqrtsnn, or of the centrality of the collision (an experimental quantity correlated to the impact parameter and to the number of participants \npart).
+Experimentally, the production of particles is compared between ``in-vacuum'' (using proton-proton collisions, \pp) and ``in-medium'' (using HIC, \AAA, where e.g. $\textrm{A} = \textrm{Pb}$), with the possible presence of a QGP. A useful quantity is the nuclear modification factor, $\raa = \frac{1}{\ncoll}{N_{\AAA}}{N_{\pp}}$, used to compare the particle production yield between \pp and \AAA collisions, normalised by the number of binary collisions \ncoll. A unit \raa for a given process indicates that, in this case, the \AAA collision is equivalent to the sum of independent ``in-vacuum'' \pp collisions, while a \raa smaller (larger) than one points to a suppression (enhancement) of this process. The \raa can be measured as a function of the particle kinematics (transverse momentum \pt, rapidity $y$), of the collision energy \sqrtsnn, or of the centrality of the collision (an experimental quantity correlated to the impact parameter and to the number of participants \npart).
 
 % onia / in QGP
 Heavy flavour (HF) mesons are one of the many available probes to this rich physics, but they are of special interest. They contain a heavy quark, charm or beauty ($Q = c$ or $b$), and can be classified into open ($Q\bar{q}$, where $q = u, d, s$ is a light quark: e.g. \D, \B mesons) and closed or hidden ($Q\bar{Q}$, also called quarkonia: e.g. \Jpsi, \psiP,  \PgUabc, $\chi_c$, $\chi_b$) heavy flavour.
@@ -248,7 +253,7 @@ information they can provide, and this project aims at covering some of such top
 
 % Besides, another important limitation exists at the moment in LHCb: the lack of 
 In addition, the lack of properly optimised tracking algorithms for 
- \PbPb collisions has up to now limited the impact of LHCb to the most peripheral events, with occupancies similar to \pp collisions for which LHCb has been designed.
+ \PbPb central collisions has up to now limited the impact of LHCb to the most peripheral events, where detector occupancies are similar to \pp collisions for which LHCb has been designed.
 % The current tracking breaks down for the too high cluster occupancy in the VELO in \pbpb collisions, restricting the reconstruction to peripheral events only (more details in Section~\ref{sec:stateoftheart}).
 
 
@@ -813,7 +818,7 @@ visits from schools of all Sardinia.
 %  |___/ (_) |_|
 %            
            
-\subsection{Coherence and effectiveness of the work plan}
+\subsection{Coherence and effectiveness of the work plan} \label{sec:WP}
 
 In the first year of the project the \ER could perform studies of \PgU
 production with the proton-lead sample which will be collected at the
@@ -866,7 +871,7 @@ the categorisation of the QGP.
  \item \textcolor{red}{D.1.4} 2015 data re-reconstructed with the new algorithms
  \item \textcolor{blue}{M.2.1} Start the LHCb internal review of the $\rpa (\PgUn)$ analysis
  \item \textcolor{blue}{D.2.1} Preliminary result on $\rpa (\PgUn)$
- \item \textcolor{blue}{D.2.2} Paper on $\rpa (\PgUn)$
+ \item \textcolor{blue}{D.2.2} Submission of a paper on $\rpa (\PgUn)$
  \item \textcolor{green!50!black}{D.3.1} Definition of the \Dz selection from re-reconstructed 2015 \pbpb data
  \item \textcolor{green!50!black}{D.3.2} Preliminary $\raa(\Dz)$ result on 2018 \pbpb data
  \item \textcolor{green!50!black}{D.3.3} Definition of the \Jpsi selection from re-reconstructed 2015 \pbpb data
@@ -907,7 +912,7 @@ group progress label font=\bfseries\small
 %   \gantttitlelist{3,...,12}{1} 
 %   \gantttitlelist{1,...,12}{1} 
 %   \gantttitlelist{1,2}{1} \\
-  \ganttbar[bar/.append style={fill=black}]{\pbpb run (Nov. 2018)}{21}{22} \\
+  \ganttbar[bar/.append style={fill=black}]{\pbpb run}{21}{22} \\
   \ganttbar[bar/.append style={fill=red}]{WP1}{1}{18} \\
   \ganttmilestone[milestone/.append style={fill=red, rounded corners=3pt}]{M.1.1}{3} \\
   \ganttmilestone[milestone/.append style={fill=red}]{D.1.X}{10} 
@@ -926,22 +931,22 @@ group progress label font=\bfseries\small
   \ganttbar[bar/.append style={fill=magenta}]{WP4}{19}{22} \\
   \ganttmilestone[milestone/.append style={fill=magenta}]{D.4.X}{20} 
   \ganttmilestone[milestone/.append style={fill=magenta}]{}{22} \\
-  \ganttbar[bar/.append style={fill=cyan!50, dashed}]{Outreach}{2}{2} % open days in April?
-  \ganttbar[bar/.append style={fill=cyan!50, dashed}]{}{14}{14} % open days in April?
-  \ganttbar[bar/.append style={fill=cyan!50, dashed}]{}{7}{7} % research night in September?
-  \ganttbar[bar/.append style={fill=cyan!50, dashed}]{}{19}{19}\\ % research night in September?
-  \ganttbar[bar/.append style={fill=orange!50}]{W, C, S}{7}{7} % Cagliari mini-workshop
-  \ganttbar[bar/.append style={fill=orange!50}]{}{19}{19} % Cagliari mini-workshop
-  \ganttbar[bar/.append style={fill=orange!50}]{}{15}{15} % HP??
-  \ganttbar[bar/.append style={fill=orange!50}]{}{20}{20} % QM??
-  \ganttbar[bar/.append style={fill=orange!50}]{}{11}{12} % seminar marathon for CNRS in January-February :p
-  \ganttbar[bar/.append style={fill=orange!50}]{}{23}{24} % seminar marathon for CNRS in January-February :p
+  \ganttmilestone[milestone/.append style={fill=cyan!50}]{Outreach}{2} % open days in April?
+  \ganttmilestone[milestone/.append style={fill=cyan!50}]{}{14} % open days in April?
+  \ganttmilestone[milestone/.append style={fill=cyan!50}]{}{7} % research night in September?
+  \ganttmilestone[milestone/.append style={fill=cyan!50}]{}{19}\\ % research night in September?
+  \ganttmilestone[milestone/.append style={fill=orange!50}]{W, C, S}{7} % Cagliari mini-workshop
+  \ganttmilestone[milestone/.append style={fill=orange!50}]{}{19} % Cagliari mini-workshop
+  \ganttmilestone[milestone/.append style={fill=orange!50}]{}{15} % HP??
+  \ganttmilestone[milestone/.append style={fill=orange!50}]{}{20} % QM??
+  \ganttmilestone[milestone/.append style={fill=orange!50}]{}{11} % seminar marathon for CNRS in January-February :p
+  \ganttmilestone[milestone/.append style={fill=orange!50}]{}{23} % seminar marathon for CNRS in January-February :p
 %  \ganttbar{Talks for graduate students}{19}{19}
 \end{ganttchart}
 \end{tikzpicture}
 \end{center}
 
-\caption{Gantt chart. The last line (\emph{W, C, S}) stands for \emph{Workshops, conferences, seminars}.\label{fig:gantt}}
+\caption{Gantt chart. The \pbpb run is expected in November 2018, its exact situation in the Gantt chart depends on the starting date of the project. The last line (\emph{W, C, S}) stands for \emph{Workshops, conferences, seminars}.\label{fig:gantt}}
 \end{figure}
 
 
@@ -957,8 +962,11 @@ group progress label font=\bfseries\small
 % Describe how the work planning and the resources mobilised will ensure that the research and training objectives will be reached. \\
 % Explain why the amount of person-months is appropriate in relation to the activities proposed.
 
-The project is divided into work packages reflecting its objectives. 
-%%FIXME expand
+The applicant will start simultaneously working on WP1 (improved tracking algorithms in \pbpb) and WP2 ($\rpa(\PgUn)$), also with PhD2. Some work will be needed before reaching the first deliverables of these WP's, but milestones have been defined on the way. While discussions with tracking experts in LHCb will be permanent, an extended status presentation at their meeting (milestone M.1.1) will allow to check what technical choices are valid or not, going towards deliverable D.1.1 (working version of the tuned algorithms for \pbpb). As far as WP2 is concerned, the equivalent will be the start of the internal review of the analysis (M.2.1), allowing to converge on a solid result. Other deliverables will follow for both WP's, as described in Section~\ref{sec:WP}, until the final ones: centrally approved new \pbpb tracking algorithms applied to 2015 \pbpb data for WP1, and submission of a publication on $\rpa(\PgUn)$ for WP2. It should be noted that while the exact timescale for WP1 will depend on the technical issues and solutions encountered during the development of the new tracking algorithms, activities in WP2 follow a safer path and secure the expected publication .
+
+Once the new tracking algorithms are validated centrally in LHCb (D.1.3), activities in WP3 can start: \pbpb data analysis. Before \pbpb data is taken in 2018, the selection will be defined in simulated samples first (and then centrally re-reconstructed 2015 \pbpb data); this correponds to D.3.1 and D.3.3, to happen on the same timescale because the selection will be largely common to the \Dz and \JPsi analyses. Preparation of the 2018 \pbpb data-taking (WP4), meaning in particular the involvement in the definition and preparation of the trigger strategy, will start roughly when work related to WP1 ends. The applicant will go to CERN for this period, together with PhD2, to ease discussion with trigger and detector experts. The \pbpb run itself will happen in November 2018, towards the end of the project, and the \ER will be deeply involved in monitoring triggers and making sure the new \pbpb tracking algorithms he developed behave as expected on the new data. The last months of the project will be dedicated to the analysis of \Dz and nonprompt \JPsi in the 2018 \pbpb data: if possible both, but with priority to the \Dz mesons if time is short.
+
+Throughout the project, the \ER will take part to yearly outreach events, as shown in the Gantt char. He will also present his results at workshops, conferences and seminars.
 
 %   ____      ____
 %  |__ /     |__ /
