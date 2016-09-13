@@ -846,7 +846,7 @@ the categorisation of the QGP.
 
 \subsubsection*{Work Packages description}
 
-\textbf{This project involves 4 work packages (WP)}, following the list of objectives. \textbf{WP1}
+\textbf{This project involves 4 work packages (WP)}, following the list of objectives described in Section~\ref{sec:objectives}. \textbf{WP1} is the development of tracking algorithms suitable for central events. \textbf{WP2} is the measurement of upsilon meson production in \pPb data taken in 2016. \textbf{WP3} is the analysis of \pbpb data, using the improved tracking algorithms from WP2. The focus will be the measurement of \Dz and prompt and nonprompt \Jpsi in \pbpb. At last, \textbf{WP4} is the participation to the 2018 \PbPb run.
 
 \begin{enumerate}
  \item Development of tracking algorithms suitable for central events
@@ -856,21 +856,21 @@ the categorisation of the QGP.
  \item Participation to the 2018 \PbPb run
 \end{enumerate}
 
-
-\subsubsection*{List of major deliverables and milestones}
+\subsubsection*{List of major deliverables (D) and milestones (M)}
 
 \begin{itemize}
- \item 1.1 Tuning of the existing tracking for \pbpb
- \item 1.2 Use of muon-related information for \pbpb tracking
- \item 1.3 Validation and inclusion in the central LHCb reconstruction software
- \item 1.4 Re-reconstruction of 2015 data with the new algorithms
- \item 2.1 Preliminary result on $\rpa (\Upsilon(nS))$
- \item 2.2 Paper on $\rpa (\Upsilon(nS))$
- \item 3.1 Preparation of the \Dz analysis on re-reconstructed 2015 \pbpb data
- \item 3.2 Analysis of 2018 \pbpb data
- \item 4.1 Preparation of the \Jpsi analysis on re-reconstructed 2015 \pbpb data
- \item 4.2 Analysis of 2018 \pbpb data
- \item 5.1 Participation to the 2018 \pbpb run
+ \item D.1.1 Tuned tracking algorithms for \pbpb
+ \item D.1.2 \pbpb tracking accounting for the muon information
+ \item D.1.3 New \pbpb tracking validated and included in the central LHCb reconstruction software
+ \item D.1.4 2015 data re-reconstructed with the new algorithms
+ \item D.2.1 Preliminary result on $\rpa (\Upsilon(nS))$
+ \item D.2.2 Paper on $\rpa (\Upsilon(nS))$
+ \item D.3.1 Definition of the \Dz selection from re-reconstructed 2015 \pbpb data
+ \item D.3.2 Preliminary $\raa(\Dz)$ result on 2018 \pbpb data
+ \item D.3.3 Definition of the \Jpsi selection from re-reconstructed 2015 \pbpb data
+ \item D.3.4 Preliminary $\raa(\Jpsi)$ result on 2018 \pbpb data
+ \item D.4.1 Trigger strategy for 2018 \pbpb
+ \item D.4.2 2018 \pbpb data on tape
 \end{itemize}
 
 
@@ -899,24 +899,29 @@ group progress label font=\bfseries\small
     title label node/.append style={left=0pt and -6pt}
   ]{MONTH\quad1}{1}
   \gantttitlelist{2,...,24}{1} \\
-  \gantttitle{2017}{10}
-  \gantttitle{2018}{12}
-  \gantttitle{2019}{2}\\
-  \gantttitlelist{3,...,12}{1} 
-  \gantttitlelist{1,...,12}{1} 
-  \gantttitlelist{1,2}{1} \\
-  \ganttbar{2018 Pb-ion collision data-taking}{21}{21} \\
-  \ganttbar{Period of deliverable 1.1}{1}{10} \\
-  \ganttbar{Period of deliverable 1.2}{4}{13} \\
-  \ganttbar{Period of deliverable 1.3}{11}{16} \\
-  \ganttbar{Period of deliverable 1.4}{17}{18} \\
-  \ganttbar{Period of deliverable 2.1}{1}{12} \\
-  \ganttbar{Period of deliverable 2.2}{13}{16} \\
-  \ganttbar{Period of deliverable 3.1}{17}{20} \\
-  \ganttbar{Period of deliverable 3.2}{22}{24} \\
-  \ganttbar{Period of deliverable 4.1}{14}{20} \\
-  \ganttbar{Period of deliverable 4.2}{22}{24} \\
-  \ganttbar{Period of deliverable 5.1}{18}{21} \\
+%   \gantttitle{2017}{10}
+%   \gantttitle{2018}{12}
+%   \gantttitle{2019}{2}\\
+%   \gantttitlelist{3,...,12}{1} 
+%   \gantttitlelist{1,...,12}{1} 
+%   \gantttitlelist{1,2}{1} \\
+  \ganttbar{\pbpb run (Nov. 2018)}{20}{21} \\
+  \ganttbar[bar/.append style={fill=red}]{WP1}{1}{18} \\
+  \ganttmilestone[milestone/.append style={fill=red}]{D.1.1}{10} \\
+  \ganttmilestone[milestone/.append style={fill=red}]{D.1.2}{13} \\
+  \ganttmilestone[milestone/.append style={fill=red}]{D.1.3}{16} \\
+  \ganttmilestone[milestone/.append style={fill=red}]{D.1.4}{18} \\
+  \ganttbar[bar/.append style={fill=blue}]{WP2}{1}{16} \\
+  \ganttmilestone[milestone/.append style={fill=blue}]{D.2.1}{12} \\
+  \ganttmilestone[milestone/.append style={fill=blue}]{D.2.2}{16} \\
+  \ganttbar[bar/.append style={fill=green}]{WP3}{17}{24} \\
+  \ganttmilestone[milestone/.append style={fill=green}]{D.3.1}{19} \\
+  \ganttmilestone[milestone/.append style={fill=green}]{D.3.2}{24} \\
+  \ganttmilestone[milestone/.append style={fill=green}]{D.3.3}{19} \\
+  \ganttmilestone[milestone/.append style={fill=green}]{D.3.4}{24} \\
+  \ganttbar[bar/.append style={fill=magenta}]{WP4}{18}{21} \\
+  \ganttmilestone[milestone/.append style={fill=magenta}]{D.4.1}{19} \\
+  \ganttmilestone[milestone/.append style={fill=magenta}]{D.4.2}{21} \\
   \ganttbar{INFN Cagliari workshop}{7}{7} 
   \ganttbar{}{19}{19} \\
   \ganttbar{Conference}{15}{15} 
