@@ -297,15 +297,16 @@ suppression than at RHIC or SPS, giving hints of $c\bar{c}$ recombination. Howev
 consists of prompt \Jpsi (from bound $c\bar{c}$ pairs, including heavier quarkonium decay) and nonprompt \Jpsi (coming
 from the decay of open beauty), separated measurements were necessary to understand the behaviour of charmonia in the medium. 
 This separation, first done in CMS (and also used by the \ER in his measurement of prompt \Jpsi and \psiP mesons in \pbpb), can be done down to 0 \pt only with ALICE (at central rapidity, in the electron channel) and LHCb (at forward rapidity, in the muon channel).
-However, LHCb only has access to the most peripheral \pbpb collisions at the moment, a situation this proposal aims at improving. In addition, a lot of interest has been
-raised recently regarding the low-\pt excess of \Jpsi production in very peripheral \pbpb in ALICE~\footnote{ALICE Collaboration, Phys. Rev. Lett. 116, 222301.}, thought to be coming from photoproduction. The 
-excellent momentum resolution of LHCb, superior to that of ALICE, could shed new light on this phenomenon.
+% However, LHCb only has access to the most peripheral \pbpb collisions at the moment, a situation this proposal aims at improving. 
+% In addition, a lot of interest has been
+% raised recently regarding the low-\pt excess of \Jpsi production in very peripheral \pbpb in ALICE~\footnote{ALICE Collaboration, Phys. Rev. Lett. 116, 222301.}, thought to be coming from photoproduction. The 
+% excellent momentum resolution of LHCb, superior to that of ALICE, could shed new light on this phenomenon.
 
 
 
 \paragraph{\D mesons:\ }\ 
 The charm production have been measured at RHIC via single
-electrons from semileptonic decays and/or $\D \to \K\pi$. These measurements show a strong suppression at
+electrons from semileptonic decays and / or $\D \to \K\pi$. These measurements show a strong suppression at
 high \pt related to $c$-quark energy loss, but no modification ($\raa \sim 1$ for all centrality) was observed
 when integrating down to almost $0\,\GeVc$. 
 % The open to close charm ratio at RHIC hence show that \Jpsi are heavily suppressed. 
@@ -315,7 +316,7 @@ a strong suppression is still observed, contrary to RHIC.
 % The question of measuring the \D mesons down to the lowest \pt becomes crucial.
 % in interpreting the LHC \Jpsi suppression/enhancement. 
 LHCb has measured \D mesons in \ppb collisions down to 0 \pt, with analysis techniques
-that will be ported to \pbpb collisions in this project.
+that will be transferred to \pbpb collisions in this project.
 
 
 
@@ -324,7 +325,7 @@ The LHCb experiment has recorded \pbpb data for the first time in 2015. At the m
 % The current tracking algorithms cannot cope with
 % the very high charged particle multiplicity in central \pbpb collisions: beyond 15\,000 clusters in the VELO, the event cannot be reliably reconstructed.
 % The centrality could be determined from the energy deposited in the calorimeter, showing that this number of VELO clusters correpond to a minimum currently accessible centrality of about 50-60\% (Fig.~\ref{fig:pbpblhcb} left). Despite this fact and the lack of physics results published to date on this \pbpb data, LHCb has demonstrated its hability to reconstruct clean $\Jpsi \to \mumu$ and $\Dz \to \K\pi$ signals (Fig.~\ref{fig:pbpblhcb} right) in the peripheral \pbpb available, as well as a strong ultra-peripheral \Jpsi signal.
-The \Dz and \Jpsi analyses based on these data are currently under internal review and are expected to be published in the Autumn 2016. A clear \Dz peak is shown in Fig.~\ref{fig:pbpblhcb} (right). Since the regular LHCb tracking algorithms optimised for \pp with minimal changes have been used in reconstructing these data, the analyses have only address events up to centralities of about 60\% (see Fig.~\ref{fig:pbpblhcb}, left). This limit correspond to about 15\,000 clusters in the VELO, value for which the tracking performance starts to become inefficient.
+The \Dz and \Jpsi analyses based on these data are currently under internal review and are expected to be published in the end of 2016. A clear \Dz peak is shown in Fig.~\ref{fig:pbpblhcb} (right). Since the regular LHCb tracking algorithms optimised for \pp with minimal changes have been used in reconstructing these data, the analyses have only address events up to centralities of about 60\% (see Fig.~\ref{fig:pbpblhcb}, left). This limit correspond to about 15\,000 clusters in the VELO, value for which the tracking performance starts to become inefficient.
 
 % \begin{wrapfigure}{r}{0.5\textwidth}
 %   \begin{center}
@@ -388,9 +389,9 @@ In order to achieve this objective, two main paths will be followed, defined in 
 First, a simplified tracking will be developed, that could be run within the reach of the available computing resources, in terms of time and memory usage. It is crucial to reduce the number of seeds to be considered by the tracking algorithms. For this, the idea would be to tighten the minimum number of clusters in 
 the VELO or tracking stations during the pattern recognition (i.e. the track building state). 
 % Quality cuts on the track seeds will be tightened, such as the minimum number of clusters in the VELO or in the tracking stations, or the ``ghost probability'' (a variable gauging the likelihood that a track candidate is a fake). 
-The goal is to restrict to the best quality seeds, so that the combinatorics of patter recognition is kept at a manageable level in the very high track multiplicity of PbPb collisions, even if that means slightly loosing in terms of track efficiency, especially at very low \pt. In that regard, it would also be possible to reduce the size of the search window used in pattern recognition: this would speed up reconstruction but restrict to straighter (i.e. higher \pt) tracks.
+The goal is to restrict to the best quality seeds, so that the combinatorics of patter recognition is kept at a manageable level in the very high track multiplicity of PbPb collisions, even if that means to compromise in terms of track efficiency, especially at very low \pt. In that regard, it would also be possible to reduce the size of the search window used in pattern recognition: this would allow faster reconstruction but restrict to straighter (i.e. higher \pt) tracks.
 
-Second, the information from the muon stations can be used, in different ways. Muon tracks can be used as seeds and propagated back through the tracking stations (T, see Fig.~\ref{fig:lhcb}), which will allow for smaller search windows (and ignoring the rest of the detector), compared to starting with no seed at all. The other possible (and complementary) strategy is to match VELO tracks to muon tracks, thus bypassing the T stations, which suffer much more from the high occupancy than the muon stations. Here the idea is to have a higher efficiency for muons, which have a much smaller multiplicity than charged particles in general and are used for measurements involving quarkonia, for instance. 
+Second, the information from the muon stations can be used, in different ways. Muon tracks can be used as seeds and propagated back through the tracking stations (T, see Fig.~\ref{fig:lhcb}), which will allow for smaller search windows (and ignoring the rest of the detector), compared to starting with no seed at all. The other complementary strategy is to match VELO tracks to muon tracks, thus bypassing the T stations, which suffer much more from the high occupancy than the muon stations. Here the idea is to have a higher efficiency for muons, which have a much smaller multiplicity than charged particles in general and are used for measurements involving quarkonia, for instance. 
 
 The \ER will work on these improvements at the same time as getting familiar with the LHCb reconstruction software. Once finalised, he will propose the inclusion of his algorithms in the official LHCb reconstruction software and perform its validation on 2015 \pbpb data and simulation.
 
@@ -447,7 +448,7 @@ The contents of this proposal are currently not covered in LHCb. It would allow 
 
 This project's scope is limited to physics. Nevertheless, it will connect different fields of physics, as it will open a new physics case in a LHCb, fully enabling heavy-ion physics in an experiment originally designed for b-physics.
 % It relates two communities that are usually quite disconnected, focusing on in-medium QCD (heavy ion collisions) and in-vacuum standard model (proton-proton collisions).  The \ER is used to bridge the two, having worked both on Higgs and QGP physics (the latter in a multi-purpose experiment), as is the host, who has also worked in CDF and LHCb. This project will significantly enhance the physics case of the LHCb experiment (originally primarily focused on B physics) in the study of heavy ion collisions. 
-In addition, there will also be the possibility to perform a phenomenology interpretation of some of the measurements performed within this project (e.g. the $\rpa(\PgUabc)$), especially given the \ER's interest in this regard. Such a study could be performed together with the \ER's past collaborators and / or with the theory group of the host institution. \Supervisor is involved in a project with the theory and ALICE  groups in Cagliari. If funded, this would lead to a new collaboration based on the study of new observables indicated by the theorists which could shed light on the very nature of QGP.
+In addition, there will also be the possibility to perform a phenomenology interpretation of some of the measurements performed within this project (e.g. the $\rpa(\PgUabc)$), especially given the \ER's interest in this regard. Such a study could be performed together with the \ER's past collaborators and with the theory group of the host institution. \Supervisor is involved in a project with the theory and ALICE  groups in Cagliari. If funded, this would lead to a new collaboration based on the study of new observables indicated by the theorists which could shed light on the very nature of QGP.
 
 %   _       ___ 
 %  / |     |_  )
@@ -470,7 +471,7 @@ In addition, there will also be the possibility to perform a phenomenology inter
 \subsubsection{Benefit for the applicant}
 \label{sec:benefitapplicant}
 
-The \ER will learn new skills regarding tracking, on top of his knowledge from CMS, for a new detector and having to develop the fundamentals of new algorithms. More generally speaking, his move to a new Collaboration, from CMS to LHCb, will require that he learns about a new environment, new software, and new detector (with a different architecture from a general purpose detector such as \DO or CMS). 
+The \ER will learn new skills regarding tracking, on top of his knowledge from CMS, for a new detector and having to develop the fundamentals of new algorithms. His move to a new Collaboration, from CMS to LHCb, will require that he learns about a new environment, new software, and new detector (with a different architecture from a general purpose detector such as \DO or CMS). 
 
 Among the specificities of LHCb, he will learn about particle identification (PID, the convener of this group is at INFN Cagliari) and its use in data analysis, e.g. for the \Dz in \pbpb analysis. 
 % Indeed, the \ER has mostly worked with leptons so far (electrons and muons), and the use of identified charged hadrons for data analysis will be new to him.
@@ -593,7 +594,7 @@ Orsay group. The current
 version of these analyses indicate that the 
 poor performance of the PID and tracking algorithms at high occupancy 
 (thus low centrality) is the main limitation already 
-in the centrality of 60-70\%. The ERC post-doc and the student will 
+in the centrality of 60-70\%. The ERC post-doc and PhD1 will 
 concentrate on the adaptation of the PID criteria
 for muons and hadrons in the busy \PbPb environment.
 In this they will benefit by the collaboration 
@@ -871,12 +872,12 @@ the categorisation of the QGP.
  \item \textcolor{red}{D.1.4} 2015 data re-reconstructed with the new algorithms
  \item \textcolor{blue}{M.2.1} Start the LHCb internal review of the $\rpa (\PgUn)$ analysis
  \item \textcolor{blue}{D.2.1} Preliminary result on $\rpa (\PgUn)$
- \item \textcolor{blue}{D.2.2} Submission of a paper on $\rpa (\PgUn)$
+ \item \textcolor{blue}{D.2.2} Publication of the analysis
  \item \textcolor{green!50!black}{D.3.1} Definition of the \Dz selection from re-reconstructed 2015 \pbpb data
  \item \textcolor{green!50!black}{D.3.2} Preliminary $\raa(\Dz)$ result on 2018 \pbpb data
  \item \textcolor{green!50!black}{D.3.3} Definition of the \Jpsi selection from re-reconstructed 2015 \pbpb data
  \item \textcolor{green!50!black}{D.3.4} Preliminary $\raa(\Jpsi)$ result on 2018 \pbpb data
- \item \textcolor{magenta}{D.4.1} Trigger strategy for 2018 \pbpb
+ \item \textcolor{magenta}{D.4.1} Definition and design of the trigger strategy for 2018 \pbpb
  \item \textcolor{magenta}{D.4.2} 2018 \pbpb data on tape
 \end{itemize}
 
@@ -984,15 +985,15 @@ Throughout the project, the \ER will take part to yearly outreach events, as sho
 
 \paragraph{Project organisation and management structure: }\
 The project will be primarily managed by the \ER, advised by \supervisor. The workflow is embedded in the LHCb
-collaboration that has plenty of quality-control procedures. The money will be mostly used by the \ER to travel to
-CERN and to conferences, at the \ER’s own choice, validated by \supervisor. There will also be a close collaboration with LAL, where \supervisor started her ERC Consolidator Grant, also needing travel to France. As done in the past,
-the money can also be used to invite for short term periods contributors or helpers to the proposed objective and/or
+collaboration that has plenty of quality-control procedures. The budget will be mostly used by the \ER to travel to
+CERN and to conferences, at the \ER’s own choice, validated by \supervisor. There will also be a close collaboration with LAL, where \supervisor started her ERC Consolidator Grant, and this will imply travel to France. As done in the past,
+the money can also be used to invite for short term periods contributors or helpers to the proposed objective and / or
 be invested in organizing a workshop.
 
 
 
 \paragraph{Risks that might endanger reaching project objectives: }\
-The main risk concerns the exact feasibility of reconstructing in good conditions more central events than is currently being done in LHCb. However it would be acceptable to allow for a lower performance of the tracking than in \pp collisions: for instance a lower overall efficiency could be tolerated, especially at low \pt, and / or a higher fake rate. If the \pt threshold in track reconstruction had to be raised too much, the access to 0 \pt \Dz could not be possible in the most central events. It is also unclear what are the most central events that will be accessible. 
+The main risk concerns the exact feasibility of reconstructing in good conditions more central events than is currently being done in LHCb. However it would be acceptable to allow for a lower performance of the tracking than in \pp collisions: for instance a lower overall efficiency could be tolerated, especially at low \pt, and / or a higher rate of background tracks mimicking the signal. If the \pt threshold in track reconstruction had to be raised too much, the access to 0 \pt \Dz could not be possible in the most central events. It is also unclear what are the most central events that will be accessible. 
 
 There is also the possibility, though very unlikely, that the 2018 \pbpb run would be shortened, postponed or even cancelled, because of issues with the accelerator or the detector, or any other reason. In this case, the project would focus on the analysis of 2015 \pbpb data (despite its much lower integrated luminosity than expected in 2018), already benefiting from the new tracking algorithms developed during the project.
 
