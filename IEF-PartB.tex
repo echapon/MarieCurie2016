@@ -25,9 +25,10 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{wrapfig}
+\setlength\intextsep{0pt}
 \usepackage{lipsum}
 \usepackage{xstring}
-\usepackage[font=small]{caption}
+\usepackage[font=footnotesize]{caption}
 
 \input{newcommands.tex}
 \input{custom-definitions.tex}
@@ -153,7 +154,9 @@
 %  & \MyHead{2.5cm}{\textbf{Role of\\Partner\\Organisation}} \\
   \hline
 %  \underline{Beneficiary} & & & & & & \\\hline
-  Istituto Nazionale di Fisica Nucleare & INFN & X & & Italy & Dipartimento di Fisica dell'Università di Cagliari,\qquad INFN Calgiari & Giulia Manca \\\hline
+  Istituto Nazionale di Fisica Nucleare & INFN & X & & Italy & 
+%   Dipartimento di Fisica dell'Università di Cagliari /\qquad 
+  INFN Calgiari & Giulia Manca \\\hline
 %  \underline{Partner} \underline{Organisation} & & & & & & & \\\hline
 %  - NAME  & & & & & & & \\\hline
   \end{tabular}
@@ -166,7 +169,7 @@ This research proposal dose not have neither a partner organisation nor non-acad
 
 \vspace{30pt}
 
-\def\projectabstract{Heavy flavour mesons are excellent probes to the rich phenomenology at play in heavy ion collisions (HIC). Heavy quarks are produced in the first instants of the collision and are sensitive to the full evolution of the medium. At the Large Hadron Collider (LHC) of the European Organization for Nuclear Research (CERN), all four large experiments (ALICE, ATLAS, CMS and LHCb) are analysing data from HIC. Originally designed for the study of hadrons containing b or c quarks in pp collisions, the LHCb specifications are extremely well suited for the physics of HIC. This project aims at exploiting the experiment's HIC data to be taken in 2016 and 2018, on measurements much awaited by the community: the nuclear modification factors of bottomonia in pPb collisions, and of D mesons and prompt and nonprompt J/psi in PbPb collisions. The current data collected by LHCb only accedes the most peripheral (i.e. high centrality) events, where occupancies are similar to the ones of pp collisions for which LHCb has been optimised. Thanks to BeyondLHCb, a novel technique will be implemented which will allow LHCb to reach the regions of most central events where the signatures of QGP are most evident. The excellent performances of the LHCb detector and the extension of the centrality allowed by BeyondLHCb will allow LHCb to take a leading role in the HIC physics at the LHC, in direct competition to the dedicated HI experiments.}
+\def\projectabstract{Heavy flavour mesons are excellent probes to the rich phenomenology at play in heavy ion collisions (HIC). Heavy quarks are produced in the first instants of the collision and are sensitive to the full evolution of the medium. At the Large Hadron Collider (LHC) of the European Organization for Nuclear Research (CERN), all four large experiments (ALICE, ATLAS, CMS and LHCb) are analysing data from HIC. Originally designed for the study of hadrons containing b or c quarks in pp collisions, the LHCb specifications are extremely well suited for the physics of HIC. This project aims at exploiting the experiment's HIC data to be taken in 2016 and 2018, on measurements much awaited by the community: the nuclear modification factors of bottomonia in pPb collisions, and of D mesons and prompt and nonprompt J/psi in central PbPb collisions. Currently LHCb only accedes the most peripheral (i.e. high centrality) events, where occupancies are closer to the ones of pp collisions for which LHCb has been optimised. Thanks to BeyondLHCb, a novel technique will be implemented which will allow LHCb to reach the regions of most central events where the signatures of QGP are most evident. The excellent performances of the LHCb detector and the extension of the centrality allowed by BeyondLHCb will allow LHCb to take a leading role in the HIC physics at the LHC, in direct competition to the dedicated HI experiments.}
 % \def\projectabstract{abc}
 \textbf{{\large Abstract [TO BE REMOVED FROM PART B]}} [currently \StrLen{\projectabstract}\ chars]\\
 \projectabstract
@@ -217,26 +220,25 @@ This research proposal dose not have neither a partner organisation nor non-acad
 % general QCD and QGP
 Relativistic heavy ion collisions (HIC) are an excellent laboratory for the study of quantum chromodynamics (QCD) in nuclear matter. In particular, the Quark-Gluon Plasma (QGP) can be studied, a phase of QCD in which, at sufficiently high temperature and energy density, quarks and gluons are no longer confined inside hadrons, as they are in ordinary matter. The universe is thought to have been in such a state for the few instants after the Big Bang, but such extreme conditions can also be reproduced in the laboratory with HIC, currently at the Relativistic Heavy Ion Collider (RHIC, Brookhaven, USA)
 and the Large Hadron Collider (LHC, CERN, Europe).
-
+%
 % observables and quantities
 Experimentally, the production of particles is compared between ``in-vacuum'' (using proton-proton collisions, \pp) and ``in-medium'' (using HIC, \AAA, where e.g. $\textrm{A} = \textrm{Pb}$), with the possible presence of a QGP. A useful quantity is the nuclear modification factor, $\raa = \frac{1}{\ncoll}{N_{\AAA}}{N_{\pp}}$, used to compare the particle production yield between \pp and \AAA collisions, normalised by the number of binary collisions \ncoll. A unit \raa for a given process indicates that, in this case, the \AAA collision is equivalent to the sum of independent ``in-vacuum'' \pp collisions, while a \raa smaller (larger) than one points to a suppression (enhancement) of this process. The \raa can be measured as a function of the particle kinematics (transverse momentum \pt, rapidity $y$), of the collision energy \sqrtsnn, or of the centrality of the collision (an experimental quantity correlated to the impact parameter and to the number of participants \npart).
 
 % onia / in QGP
-Heavy flavour (HF) mesons are one of the many available probes to this rich physics, but they are of special interest. They contain a heavy quark, charm or beauty ($Q = c$ or $b$), and can be classified into open ($Q\bar{q}$, where $q = u, d, s$ is a light quark: e.g. \D, \B mesons) and closed or hidden ($Q\bar{Q}$, also called quarkonia: e.g. \Jpsi, \psiP,  \PgUabc, $\chi_c$, $\chi_b$) heavy flavour.
-The heavy quarks in HF mesons are produced early in the collisions, making them sensitive to the full evolution of the medium. Open HF mesons are affected by jet quenching and modifications of the jet fragmentation functions, as well as energy loss. Quarkonium production in \AAA can be suppressed due to melting in the QGP (because of Debye screening of the $Q\bar{Q}$ in the QGP, with a very high colour charge density), but also enhanced with statistical recombination (when originally uncorrelated $Q$ and $\bar{Q}$ meet in the QGP and form a quarkonium), the interplay between the two being complex and very \pt and \sqrtsnn dependent.
-
+Heavy flavour (HF) mesons are one of the many available probes to this rich physics, but they are of special interest. They contain a heavy quark, charm or beauty ($\textrm{Q} = \textrm{c}$ or b), and can be classified into open ($\textrm{Q}\bar{\textrm{q}}$, where $\textrm{q} = \textrm{u}$, d, s is a light quark: e.g. \D, \B mesons) and closed or hidden (\QQbar, also called 
+quarkonia: e.g. \Jpsi, \psiP,  \PgUabc, $\chi_{\textrm{c}}$, $\chi_{\textrm{b}}$) heavy flavour.
+The heavy quarks in HF mesons are produced early in the collisions, making them sensitive to the full evolution of the medium. Open HF mesons are affected by jet quenching and modifications of the jet fragmentation functions, as well as energy loss. Quarkonium production in \AAA can be suppressed due to melting in the QGP (because of Debye screening of the \QQbar in the QGP, with a very high colour charge density), but also enhanced with statistical recombination (when originally uncorrelated Q and $\bar{\textrm{Q}}$ meet in the QGP and form a quarkonium), the interplay between the two being complex and very \pt and \sqrtsnn dependent.
+%
 % cold nuclear matter effects?
 These effects from the QGP are however not the only ones at play in HIC. Indeed, the initial state itself is different from \pp, which can be described by nuclear modifications to the parton distribution functions (PDF). Partons and hadrons can also lose energy in cold nuclear matter (CNM). Such nuclear effects, which can mimic the effects due to the presence of QGP, can be better studied in proton-ion (\pA) collisions, in which no QGP is thought to form, including \rpa measurements (defined similarly to the \raa).
 
 % more details about the project
-
-
 At the LHC, while
 ALICE is the only experiment fully dedicated to the study of HIC, the general purpose ATLAS and CMS detectors have also published a number of precise
 measurements. It is only recently that the fourth LHC experiment, LHCb, originally focused on the study of particles containing b or c quarks, 
 has also shown interest to this data, benefiting from the unique 
 specificities of its detector, especially in terms of momentum resolution or particle identification. 
-
+%
 The LHCb detector includes a high-precision tracking system consisting of a silicon-strip vertex detector (VELO) surrounding the interaction region, a large-area silicon-strip detector located upstream of a dipole magnet with a bending power of about 4\,\tesla\meter, and three stations of silicon-strip detectors and straw drift tubes placed downstream of the magnet. The combined tracking system provides a momentum resolution with a relative uncertainty well below 1\%, and an impact parameter
  measurement with a resolution of 20\,\micro\meter\ for charged particles with large transverse momentum (\pt) in pp collisions. Different types of charged hadrons are distinguished using information from two ring-imaging Cherenkov (RICH) detectors. Photon, electron and hadron candidates
 are identified by a calorimeter system
@@ -250,7 +252,7 @@ With the upcoming heavy-ion runs from the LHC -- \ppb collisions at the end of 2
 it is very timely to exploit the high quality data taken by LHCb. Despite the strong interest of the heavy-ion community and of the LHCb Collaboration,
 the effort is only starting, lead by a few institutions, mostly European. Many probes are left so far unmeasured in the existing data, despite the important
 information they can provide, and this project aims at covering some of such topics. They include the \rpa of \PgUabc, and the \raa of \Dz and prompt and nonprompt \Jpsi, three measurements complementary to each other but also extending the possibilities of the other LHC experiments.
-
+%
 % Besides, another important limitation exists at the moment in LHCb: the lack of 
 In addition, the lack of properly optimised tracking algorithms for 
  \PbPb central collisions has up to now limited the impact of LHCb to the most peripheral events, where detector occupancies are similar to \pp collisions for which LHCb has been designed.
@@ -287,7 +289,7 @@ $\Upsilon$ mesons have been extensively studied in pA and AA collisions, at RHIC
 \PgUabc states have been measured separately in heavy-ion collisions for the first time by CMS\footnote{CMS Collaboration, Phys. Rev. Lett. 109 (2012), p. 222301. },
 a result recently superseded with improved precision\footnote{CMS Collaboration, CMS-PAS-HIN-15-001, article in preparation.}, an analysis having received major contributions from the \ER. The \rpa of \PgUa has been measured by the ALICE, ATLAS and LHCb collaborations, providing information on energy loss and shadowing. However,
 these measurements at $\sqrtsnn = 5.02\,\TeV$ were lacking a proper \pp reference at the same energy, being forced to use an interpolation of measurements at other
-$\sqrt{s}$. The \PgUc in \ppb has also only been measured by CMS, but only through its ratio to the \PgUa: the \rpa of the \PgUc has never been directly measured to date.
+$\sqrt{s}$. The ratio $\PgUc/\PgUa$ has been measured by CMS, but not the \rpa (\PgUc), never directly measured to date. The latter is important to study the different effects of CNM effects, in particular nuclear absorption and comovers, on the ground and excited states.
 
 \paragraph{\Jpsi:\ }\ 
 \Jpsi measurements have been performed for more than 20 years in heavy-ion collisions, from the Super Proton Synchrotron (SPS) at CERN to RHIC and LHC. 
@@ -318,7 +320,21 @@ a strong suppression is still observed, contrary to RHIC.
 LHCb has measured \D mesons in \ppb collisions down to 0 \pt, with analysis techniques
 that will be transferred to \pbpb collisions in this project.
 
-
+\begin{figure}[htb]
+  \begin{center}
+    \includegraphics[width=0.32\textwidth]{plots/ecal_in_ecal_bins.pdf}
+    \hspace{0.02\textwidth}
+    \includegraphics[width=0.32\textwidth]{plots/d0_ecalbin_90_70.pdf}
+%     https://twiki.cern.ch/twiki/bin/view/LHCb/LHCbPlots2015
+    \hspace{0.02\textwidth}
+    \includegraphics[width=0.23\textwidth]{plots/ALICE_D0.pdf}
+  \end{center}
+  \vspace{-20pt}
+  \caption{Left: Electromagnetic calorimeter energy distribution in 
+PbPb collisions divided into centrality classes highlighted in different colours.
+  Middle: $\Dz \to \K\pi$ in 70-90\% \pbpb in LHCb. Right: $\raa(\D)$ from ALICE.
+  \label{fig:pbpblhcb}}
+\end{figure}
 
 \paragraph{Nucleus-nucleus collisions in LHCb:\ }\ 
 The LHCb experiment has recorded \pbpb data for the first time in 2015. At the moment, no specific optimisation of the reconstruction of such events has been performed. 
@@ -334,23 +350,10 @@ The \Dz and \Jpsi analyses based on these data are currently under internal revi
 %   \caption{Number of VELO clusters as a function of the calorimeter energy. Colors represent different centrality classes.}
 % \end{wrapfigure}
 
-\begin{figure}[htb]
-  \begin{center}
-    \includegraphics[width=0.48\textwidth]{plots/ecal_in_ecal_bins.pdf}
-    \includegraphics[width=0.48\textwidth]{plots/d0_ecalbin_90_70.pdf}
-%     https://twiki.cern.ch/twiki/bin/view/LHCb/LHCbPlots2015
-  \end{center}
-  \caption{Left: Electromagnetic calorimeter energy distribution in 
-PbPb collisions divided into centrality classes highlighted in different colours.
-  Right: $\Dz \to \K\pi$ in 70-90\% \pbpb in LHCb. 
-  \label{fig:pbpblhcb}}
-\end{figure}
-
 LHCb also features a System for Measuring the Overlap with Gas (SMOG), consisting in the injection of a noble gas at very low pressure in the VELO, to measure the beam
 position and profile with very high precision. It also allows for the study of the collision of the proton or Pb-ion LHC beam with the gas, in a ``fixed target'' mode.
 The corresponding rich physics program, beyond the scope of this project, does not suffer from the tracking limitations exposed above, thanks to the smaller track multiplicity
 at these much smaller centre-of-mass energies.
-
 
 \subsubsection{Overview of the action}
 
@@ -363,27 +366,29 @@ to central \pbpb collisions.
 
 \subsubsection{Objectives, research methodology and approach}\label{sec:objectives}
 
-\begin{figure}[htb]
-  \begin{center}
-    \includegraphics[width=0.4\textwidth]{plots/centrality.pdf}
-    \includegraphics[width=0.28\textwidth]{plots/ALICE_D0.pdf}
-    \includegraphics[width=0.28\textwidth]{plots/NonPromptJpsi_RAAvsCent_slides.pdf}
-%     https://twiki.cern.ch/twiki/bin/view/LHCb/LHCbPlots2015
-  \end{center}
-  \caption{Left: \npart distribution (from Hydjet simulation at $\sqrtsnn = 5.02\,\TeV$) with different centrality cuts. Middle: $\raa(\D)$ from ALICE. Right: \raa of nonprompt \Jpsi from CMS.
-  \label{fig:npart}}
-\end{figure}
+% \begin{figure}[htb]
+%   \begin{center}
+%     \includegraphics[width=0.4\textwidth]{plots/centrality.pdf}
+%     \includegraphics[width=0.28\textwidth]{plots/ALICE_D0.pdf}
+%     \includegraphics[width=0.28\textwidth]{plots/NonPromptJpsi_RAAvsCent_slides.pdf}
+% %     https://twiki.cern.ch/twiki/bin/view/LHCb/LHCbPlots2015
+%   \end{center}
+%   \caption{Left: \npart distribution (from Hydjet simulation at $\sqrtsnn = 5.02\,\TeV$) with different centrality cuts. Middle: $\raa(\D)$ from ALICE. Right: \raa of nonprompt \Jpsi from CMS.
+%   \label{fig:npart}}
+% \end{figure}
 
 \paragraph{Tracking in central \pbpb events. }\ 
 The first objective is to be able to reconstruct central events in LHCb. Currently the experiment is only capable of reconstructing events down to approximately 60\% centrality, due to the too high cluster multiplicity in the VELO: it misses most of the hard probe cross sections (which scales as the number of collisions \ncoll rather than the number of participants \npart). This is a major stake in the LHCb \pbpb program: if this limitation would be diminished or removed, LHCb would be able to perform the same physics program in \pbpb as the other LHC experiments, in particular the ALICE muon arm which covers a similar rapidity range. LHCb already benefits from its outstanding performance in terms of particle identification, momentum resolution and access to low \pt particles. A realistic goal would be to push the tracking up to 20\,000 VELO clusters, corresponding to about 30--40\% centrality.
 
 In order to achieve this objective, two main paths will be followed, defined in discussion with LHCb tracking experts. The \ER will be able to benefit from his knowledge from CMS, having gone through the same kind of exercise over the past years. Indeed, he has optimised the Regional Iterative Tracking (RegIt), used to enhance the tracking efficiency in \pbpb in a region around reconstructed muons. For this, he has familiarised himself with the tracking algorithms used in CMS, and their difference between \pp and \pbpb.
 
-\begin{wrapfigure}{r}{0.5\textwidth}
+\begin{wrapfigure}{r}{0.39\textwidth}
+\vspace{-10pt}
   \begin{center}
-    \includegraphics[width=0.5\textwidth]{plots/lhcblayout.png}
+    \includegraphics[width=0.4\textwidth]{plots/lhcblayout.png}
   \end{center}
   \caption{The LHCb detector, including the Vertex Locator (VELO), and the Trigger Tracking (TT), Tracking (T) and Muon (M) stations. \label{fig:lhcb}}
+  \vspace{-10pt}
 \end{wrapfigure}
 
 First, a simplified tracking will be developed, that could be run within the reach of the available computing resources, in terms of time and memory usage. It is crucial to reduce the number of seeds to be considered by the tracking algorithms. For this, the idea would be to tighten the minimum number of clusters in 
@@ -412,11 +417,11 @@ The \ER will lead the effort on this data analysis, being the contact person for
 
 \paragraph{\pbpb data analysis: \Dz and \Jpsi. }\ 
 Heavy flavour physics will also be investigated in \pbpb data, taking at the same time the opportunity to profit from the improved tracking algorithms to be developed for \pbpb as mentioned above. 
-
+%
 First, the nuclear modification factor of \Dz mesons will be measured, in the $\Dz \to \K\pi$. The same analysis techniques as used in \pPb\footnote{LHCb Collaboration, LHCb-CONF-2016-003.} will be adapted for \pbpb. Similar \Dz meson measurements are available from the ALICE and CMS experiments, but at central rapidity and, most of all, not down to 0 \pt, which only LHCb has the possibility to do. The absence of any \pt threshold is crucial as it gives direct access to the full cross section. The possibility to separate
 prompt \Dz mesons from those coming from B meson decays will also be a key ingredient, giving access to an unambiguous measurement of the prompt \Dz as well as an access to the \raa
 of B mesons.
-
+%
 Similarly, the \raa of \Jpsi will be measured, separately for prompt and nonprompt \Jpsi, again with a unique access to 0 \pt (ALICE has access to 0 \pt \Jpsi but cannot separate prompt from nonprompt \Jpsi; CMS can make the latter separation but with a \pt threshold of 3\,\GeVc). The experience of the \ER with \Jpsi measurements in \pbpb
 in CMS will be of key importance. The nonprompt measurements from the \Dz and \Jpsi, arising from the same physics (modification of B mesons in \pbpb), will be compared. The comparison of the \raa of the \pt-inclusive prompt \Jpsi and \Dz, i.e. of hidden to open charm, is also of primary interest as recently underlined\footnote{H. Satz. In: Adv. High Energy Phys. 242918 (2013).}.
 
@@ -426,11 +431,11 @@ Both the \Dz and \Jpsi analyses will both be first performed using 2015 \pbpb da
 \subsubsection{Originality and innovation aspects of the research programme}
 
 The design of dedicated and specially optimised tracking algorithms for the reconstruction of \pbpb collisions with LHCb will be a major breakthrough for the LHCb experiment. This will require the development of novel experimental strategies, but the \ER will be able to base on his knowledge of the specificities of tracking for \pbpb collisions in CMS.
-
+%
 This optimised tracking will then be used for the measurement of \Dz and \Jpsi mesons in \pbpb data, taking advantage of the strengths of LHCb compared to other LHC experiments: access down to 0 \pt, excellent momentum resolution (sharp resonances and good signal significance over the continuous background), excellent impact parameter resolution (for separation of the prompt and nonprompt components).
-
+%
 The measurement of \PgUabc in \ppb collisions will also benefit from these features of the LHCb detector. Besides the excellent precision of the measurement, it should present the \rpa of \PgUc for the first time, which would be crucial in disentangling CNM from QGP effects.
-
+%
 The contents of this proposal are currently not covered in LHCb. It would allow to go beyond the scope of \supervisor's ERC project. In particular, it is a unique opportunity to reach more central \pbpb events with LHCb, and the novel tracking algorithms developed will be used in data analysis, for \Dz and nonprompt \Jpsi, allowing to roughly double the current \npart reach of data analyses in LHCb. 
 % 
 % 
@@ -472,17 +477,17 @@ In addition, there will also be the possibility to perform a phenomenology inter
 \label{sec:benefitapplicant}
 
 The \ER will learn new skills regarding tracking, on top of his knowledge from CMS, for a new detector and having to develop the fundamentals of new algorithms. His move to a new Collaboration, from CMS to LHCb, will require that he learns about a new environment, new software, and new detector (with a different architecture from a general purpose detector such as \DO or CMS). 
-
+%
 Among the specificities of LHCb, he will learn about particle identification (PID, the convener of this group is at INFN Cagliari) and its use in data analysis, e.g. for the \Dz in \pbpb analysis. 
 % Indeed, the \ER has mostly worked with leptons so far (electrons and muons), and the use of identified charged hadrons for data analysis will be new to him.
 This would expand the knowledge of the \ER, who has worked mainly with leptons in the past. Using identified charged hadrons for data analysis would be an important addition to his physics baggage.
-
+%
 % move elsewhere? following is not directly knowledge transfer
 % It will be also the first time for the \ER to be settled outside France and to work for a non-French institution, an experience particularly important when working in the large international collaborations that are LHC experiments. 
 He will also learn to manage a project of his own, including the associated budget, in particular for travel to CERN and conferences, a situation that he will encounter repeatedly later in his career. The experience of \supervisor with managing projects, including the ERC Consolidator Grant, will be valuable in that sense.
-
+%
 He will improve his communication skills, which will be an important part of the project: communication inside the LHCb Collaboration with internal talks and documents, communication to the community with several papers anticipated, as well as seminars and talks at international workshops and conferences, etc. His involvement in the supervision of a PhD student, into more detail than he has had the occasion until now, will also improve his management skills.
-
+%
 The \ER's scientific network will also be expanded, with connections to a new experiment (LHCb) and a new institution (INFN Cagliari). In this way he will place himself at the heart of the community interested in heavy flavour measurements in heavy ion collisions at the LHC.
 
 
@@ -490,9 +495,9 @@ The \ER's scientific network will also be expanded, with connections to a new ex
 \subsubsection{Benefit for the host}
 
 The \ER's knowledge about tracking from CMS, in particular for \pbpb collisions, will be very important for the host when transposed in LHCb: he has been leading the effort on the improvement of RegIt, gaining up to a factor 2 on the reconstruction efficiency for very displaced muons. His experience with working on heavy ions inside a general purpose LHC experiment will also be valuable. More generally, interactions between people from different experiments, with complementary approaches to detector algorithms and data analysis, prove to be a good way to let new ideas emerge. 
-
+%
 The host will also benefit from the \ER's previous network. Besides \supervisor's strong connection with LAL Orsay, but also LLR (through Frédéric Fleuret), the \ER will keep his contacts with the CMS heavy ion groups of LLR but also other institutions. His collaboration with François Arleo, one of the authors of the energy loss model, crucial to the description of heavy flavour especially in \ppb, will also be appreciable.
-
+%
 The INFN Cagliari already has a ALICE and LHCb group (the latter
 focusing on pp collisions). A new heavy-ion pole has been created in the
 LHCb Italy group, with INFN Florence joining the SMOG activities -- one 
@@ -616,9 +621,9 @@ will profit enormously from the experience
 of the \ER who has pioneered the heavy-ion physics 
 in CMS when only a few scientists started working 
 in this area. 
-The expertise the \ER has developed in the CMS 
-heavy ion community would be crucial to 
-realise the huge potential of LHCb in this field.
+% The expertise the \ER has developed in the CMS 
+% heavy ion community would be crucial to 
+% realise the huge potential of LHCb in this field.
 
 The \ER, with long-lasting experience in heavy nuclei
 collisions and large collaborations, commissioning
@@ -658,7 +663,7 @@ skills and know-how.
 %              
             
 
-\subsection{Capacity of the researcher to reach and re-enforce a position of professional maturity in research}
+\subsection{Capacity of the researcher to reach and re-enforce professional maturity in research}
 \label{sec:maturity}
 % {\tiny
 % Applicants should demonstrate how the proposed research and training will contribute to the further professional development as an independent/mature researcher.  \\
@@ -774,7 +779,7 @@ career.
 %  /___| (_) |___/
 %           
 
-\subsection{Quality of the proposed measures to communicate the action activities to different target audiences }
+\subsection{Quality of the proposed measures to communicate to different target audiences }
 % 
 % {\tiny
 % Please make also reference to the guidelines Communicating EU research and innovation guidance for project participants1 as well as to the "communication" section of the H2020 Online Manual2.
@@ -901,7 +906,8 @@ group right shift=0,
 group height=.6,
 group peaks tip position=0,
 group label node/.append style={left=.6cm},
-group progress label font=\bfseries\small
+group progress label font=\bfseries\small,
+milestone inline label node/.append style={right=3mm}
   ]{1}{24}
   \gantttitle[
     title label node/.append style={left=0pt and -6pt}
@@ -915,14 +921,14 @@ group progress label font=\bfseries\small
 %   \gantttitlelist{1,2}{1} \\
   \ganttbar[bar/.append style={fill=black}]{\pbpb run}{21}{22} \\
   \ganttbar[bar/.append style={fill=red}]{WP1}{1}{18} \\
-  \ganttmilestone[milestone/.append style={fill=red, rounded corners=3pt}]{M.1.1}{3} \\
-  \ganttmilestone[milestone/.append style={fill=red}]{D.1.X}{10} 
+  \ganttmilestone[inline, milestone/.append style={fill=red, rounded corners=3pt}]{M.1.1}{3} 
+  \ganttmilestone[milestone/.append style={fill=red}]{M.1.1, D.1.X}{10} 
   \ganttmilestone[milestone/.append style={fill=red}]{}{13} 
   \ganttmilestone[milestone/.append style={fill=red}]{}{16} 
   \ganttmilestone[milestone/.append style={fill=red}]{}{18} \\
   \ganttbar[bar/.append style={fill=blue}]{WP2}{1}{16} \\
-  \ganttmilestone[milestone/.append style={fill=blue, rounded corners=3pt}]{M.2.1}{4} \\
-  \ganttmilestone[milestone/.append style={fill=blue}]{D.2.X}{12} 
+  \ganttmilestone[inline, milestone/.append style={fill=blue, rounded corners=3pt}]{M.2.1}{4} 
+  \ganttmilestone[milestone/.append style={fill=blue}]{M.2.1, D.2.X}{12} 
   \ganttmilestone[milestone/.append style={fill=blue}]{}{16} \\
   \ganttbar[bar/.append style={fill=green!50!black}]{WP3}{17}{24} \\
   \ganttmilestone[milestone/.append style={fill=green!50!black}]{D.3.X}{20}
@@ -947,7 +953,11 @@ group progress label font=\bfseries\small
 \end{tikzpicture}
 \end{center}
 
-\caption{Gantt chart. The \pbpb run is expected in November 2018, its exact situation in the Gantt chart depends on the starting date of the project. The last line (\emph{W, C, S}) stands for \emph{Workshops, conferences, seminars}.\label{fig:gantt}}
+\caption{Gantt chart. The \pbpb run is expected in November 2018.
+% , its exact situation in the Gantt chart depends on the starting date of the project. 
+The last line 
+% (\emph{W, C, S}) 
+stands for \emph{Workshops, conferences, seminars}.\label{fig:gantt}}
 \end{figure}
 
 
@@ -963,7 +973,7 @@ group progress label font=\bfseries\small
 % Describe how the work planning and the resources mobilised will ensure that the research and training objectives will be reached. \\
 % Explain why the amount of person-months is appropriate in relation to the activities proposed.
 
-The applicant will start simultaneously working on WP1 (improved tracking algorithms in \pbpb) and WP2 ($\rpa(\PgUn)$), also with PhD2. Some work will be needed before reaching the first deliverables of these WP's, but milestones have been defined on the way. While discussions with tracking experts in LHCb will be permanent, an extended status presentation at their meeting (milestone M.1.1) will allow to check what technical choices are valid or not, going towards deliverable D.1.1 (working version of the tuned algorithms for \pbpb). As far as WP2 is concerned, the equivalent will be the start of the internal review of the analysis (M.2.1), allowing to converge on a solid result. Other deliverables will follow for both WP's, as described in Section~\ref{sec:WP}, until the final ones: centrally approved new \pbpb tracking algorithms applied to 2015 \pbpb data for WP1, and submission of a publication on $\rpa(\PgUn)$ for WP2. It should be noted that while the exact timescale for WP1 will depend on the technical issues and solutions encountered during the development of the new tracking algorithms, activities in WP2 follow a safer path and secure the expected publication .
+The applicant will start working on WP1 (improved tracking algorithms in \pbpb) and WP2 ($\rpa(\PgUn)$), also with PhD2. Some work will be needed before reaching the first deliverables of these WP's, but milestones have been defined on the way. While discussions with tracking experts in LHCb will be permanent, an extended status presentation at their meeting (milestone M.1.1) will allow to check what technical choices are valid or not, going towards deliverable D.1.1 (working version of the tuned algorithms for \pbpb). As far as WP2 is concerned, the equivalent will be the start of the internal review of the analysis (M.2.1), allowing to converge on a solid result. Other deliverables will follow for both WP's, as described in Section~\ref{sec:WP}, until the final ones: centrally approved new \pbpb tracking algorithms applied to 2015 \pbpb data for WP1, and submission of a publication on $\rpa(\PgUn)$ for WP2. It should be noted that while the exact timescale for WP1 will depend on the technical issues and solutions encountered during the development of the new tracking algorithms, activities in WP2 follow a safer path and secure the expected publication .
 
 Once the new tracking algorithms are validated centrally in LHCb (D.1.3), activities in WP3 can start: \pbpb data analysis. Before \pbpb data is taken in 2018, the selection will be defined in simulated samples first (and then centrally re-reconstructed 2015 \pbpb data); this correponds to D.3.1 and D.3.3, to happen on the same timescale because the selection will be largely common to the \Dz and \JPsi analyses. Preparation of the 2018 \pbpb data-taking (WP4), meaning in particular the involvement in the definition and preparation of the trigger strategy, will start roughly when work related to WP1 ends. The applicant will go to CERN for this period, together with PhD2, to ease discussion with trigger and detector experts. The \pbpb run itself will happen in November 2018, towards the end of the project, and the \ER will be deeply involved in monitoring triggers and making sure the new \pbpb tracking algorithms he developed behave as expected on the new data. The last months of the project will be dedicated to the analysis of \Dz and nonprompt \JPsi in the 2018 \pbpb data: if possible both, but with priority to the \Dz mesons if time is short.
 
@@ -975,7 +985,7 @@ Throughout the project, the \ER will take part to yearly outreach events, as sho
 %  |___/ (_) |___/
 %            
 
-\subsection{Appropriateness of the management structure and procedures, including risk management }
+\subsection{Appropriateness of the management procedures, including risk management }
 
 % Describe the:
 % \begin{itemize}
@@ -994,7 +1004,7 @@ be invested in organizing a workshop.
 
 \paragraph{Risks that might endanger reaching project objectives: }\
 The main risk concerns the exact feasibility of reconstructing in good conditions more central events than is currently being done in LHCb. However it would be acceptable to allow for a lower performance of the tracking than in \pp collisions: for instance a lower overall efficiency could be tolerated, especially at low \pt, and / or a higher rate of background tracks mimicking the signal. If the \pt threshold in track reconstruction had to be raised too much, the access to 0 \pt \Dz could not be possible in the most central events. It is also unclear what are the most central events that will be accessible. 
-
+%
 There is also the possibility, though very unlikely, that the 2018 \pbpb run would be shortened, postponed or even cancelled, because of issues with the accelerator or the detector, or any other reason. In this case, the project would focus on the analysis of 2015 \pbpb data (despite its much lower integrated luminosity than expected in 2018), already benefiting from the new tracking algorithms developed during the project.
 
 %   ____      _ _  
