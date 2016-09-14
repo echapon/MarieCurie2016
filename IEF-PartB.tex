@@ -29,11 +29,20 @@
 \usepackage{lipsum}
 \usepackage{xstring}
 \usepackage[font=footnotesize]{caption}
+\usepackage{dblfnote}
+% \usepackage[multiple]{footmisc}
+\usepackage{cleveref}[2012/02/15]% v0.18.4; 
+% 0.16.1 of May 2010 would be sufficient, but what is the exact day?
+\crefformat{footnote}{#2\footnotemark[#1]#3}
 
 \input{newcommands.tex}
 \input{custom-definitions.tex}
 
 \setlist{nolistsep}
+
+\makeatletter
+\newcommand\footnoteref[1]{\protected@xdef\@thefnmark{\ref{#1}}\@footnotemark}
+\makeatother
 
 \newcommand{\TODO}[1]{{\textcolor{red}{[\textbf{TODO:} #1]}}}
 \newcommand{\acronym}{{\sc BeyondLHCb}\xspace} % Tracking in Heavy Ion Collisions with LHCb
@@ -290,25 +299,24 @@ In addition, the lack of properly optimised tracking algorithms for
 
 \paragraph{\PgUabc:\ }\ 
 $\Upsilon$ mesons have been extensively studied in pA and AA collisions, at RHIC and at the LHC. Individual
-\PgUabc states have been measured separately in heavy-ion collisions for the first time by CMS\footnote{CMS Collaboration, Phys. Rev. Lett. 109 (2012), p. 222301. },
-a result recently superseded with improved precision\footnote{CMS Collaboration, CMS-PAS-HIN-15-001, article in preparation.}, an analysis having received major contributions from the \ER. The \rpa of \PgUa has been measured by the ALICE, ATLAS and LHCb collaborations, providing information on energy loss and shadowing. However,
+\PgUabc states have been measured separately in heavy-ion collisions for the first time by CMS\footnote{CMS Collaboration, PRL {\bf 109} (2012), 222301.},
+a result recently superseded with improved precision\footnote{CMS Collaboration, CMS-PAS-HIN-15-001, article in preparation.}, an analysis having received major contributions from the \ER. The \rpa of \PgUa has been measured by the ALICE\footnote{ALICE Collaboration, Phys. Lett. B {\bf 740} (2015) 105.}, ATLAS\footnote{ATLAS Collaboration, ATLAS-CONF-2015-050.} and LHCb\footnote{\label{LHCbupsi}LHCb Collaboration, JHEP {\bf 07} (2014) 094.} collaborations, providing information on energy loss and shadowing. However,
 these measurements at $\sqrtsnn = 5.02\,\TeV$ were lacking a proper \pp reference at the same energy, being forced to use an interpolation of measurements at other
-$\sqrt{s}$. The ratio $\PgUc/\PgUa$ has been measured by CMS, but not the \rpa (\PgUc), never measured to date. The latter is important to study the different effects of CNM effects, in particular nuclear absorption and comovers, on the ground and excited states.
+$\sqrt{s}$. The ratio $\PgUc/\PgUa$ has been measured by CMS\footnote{CMS Collaboration, JHEP {\bf 04} (2014) 103.}, but not the \rpa (\PgUc), never measured to date. The latter is important to study the different effects of CNM effects, in particular nuclear absorption and comovers, on the ground and excited states.
 
 \paragraph{\Jpsi:\ }\ 
 \Jpsi measurements have been performed for more than 20 years in heavy-ion collisions, from the Super Proton Synchrotron (SPS) at CERN to RHIC and LHC. 
 At these different collision energies, all measurements showed a centrality-dependent suppression
-which gave hints of a modification caused by the medium. The LHC measurements, inclusive in \pt only with ALICE, also showed less
-suppression than at RHIC or SPS, giving hints of $c\bar{c}$ recombination. However, since the total \Jpsi yield 
+which gave hints of a modification caused by the medium. The LHC measurements, inclusive in \pt only with ALICE\footnote{ALICE Collaboration, PRL {\bf 109} (2012) 072301.}\footnote{ALICE Collaboration, arXiv:1606.08197.}, also showed less suppression than at RHIC or SPS, giving hints of $c\bar{c}$ recombination. However, since the total \Jpsi yield 
 consists of prompt \Jpsi (from bound $c\bar{c}$ pairs, including heavier quarkonium decay) and nonprompt \Jpsi (coming
 from the decay of open beauty), separated measurements were necessary to understand the behaviour of charmonia in the medium. 
-This separation, first done in CMS (and also used by the \ER in his measurement of prompt \Jpsi and \psiP mesons in \pbpb), can be done down to 0 \pt only with ALICE 
+This separation, first done in CMS\footnote{CMS Collaboration, JHEP {\bf 05} (2012) 063.} (and also used by the \ER in his measurement of prompt \Jpsi and \psiP mesons in \pbpb), can be done down to 0 \pt only with ALICE 
 % (at central rapidity, in the electron channel) 
 and LHCb. 
 % (at forward rapidity, in the muon channel).
 % However, LHCb only has access to the most peripheral \pbpb collisions at the moment, a situation this proposal aims at improving. 
 % In addition, a lot of interest has been
-% raised recently regarding the low-\pt excess of \Jpsi production in very peripheral \pbpb in ALICE~\footnote{ALICE Collaboration, Phys. Rev. Lett. 116, 222301.}, thought to be coming from photoproduction. The 
+% raised recently regarding the low-\pt excess of \Jpsi production in very peripheral \pbpb in ALICE~\footnote{ALICE Collaboration, PRL 116, 222301.}, thought to be coming from photoproduction. The 
 % excellent momentum resolution of LHCb, superior to that of ALICE, could shed new light on this phenomenon.
 
 
@@ -319,12 +327,12 @@ electrons from semileptonic decays and $\D \to \K\pi$. These measurements show a
 high \pt related to $c$-quark energy loss, but no modification ($\raa \sim 1$ for all centrality) was observed
 when integrating down to almost $0\,\GeVc$. 
 % The open to close charm ratio at RHIC hence show that \Jpsi are heavily suppressed. 
-At LHC, \D mesons have been measured by ALICE and CMS down to $2\,\GeVc$, where
+At LHC, \D mesons have been measured by ALICE\footnote{\label{ALICED}ALICE Collaboration, JHEP {\bf 11} (2015) 205.} and CMS\footnote{CMS Collaboration, CMS-PAS-HIN-16-001.} down to $2\,\GeVc$, where
 a strong suppression is still observed, contrary to RHIC. 
 % Noticeably, applying similar pT thresholds, one can align the \raa of \D mesons with the one of \Jpsi, a situation which is drastically different from RHIC.
 % The question of measuring the \D mesons down to the lowest \pt becomes crucial.
 % in interpreting the LHC \Jpsi suppression/enhancement. 
-LHCb has measured \D mesons in \ppb collisions down to 0 \pt, with analysis techniques
+LHCb has measured \D mesons in \ppb collisions\footnote{LHCb Collaboration, LHCb-CONF-2016-003.} down to 0 \pt, with analysis techniques
 that will be transferred to \pbpb collisions in this project.
 
 \begin{figure}[htb]
@@ -400,13 +408,13 @@ If this limitation would be diminished or removed, LHCb would be able to perform
 \end{wrapfigure}
 
 In order to achieve this objective, two main paths will be followed, defined in discussion with LHCb tracking experts.
-First, a simplified tracking will be developed, that could be run within the reach of the available computing resources, in terms of time and memory usage. It is crucial to reduce the number of seeds to be considered by the tracking algorithms. For this, the idea would be to tighten the minimum number of clusters in 
+First, a simplified tracking (TRK1) will be developed, that could be run within the reach of the available computing resources, in terms of time and memory usage. It is crucial to reduce the number of seeds to be considered by the tracking algorithms. For this, the idea would be to tighten the minimum number of clusters in 
 the VELO or tracking stations during the pattern recognition (i.e. the track building state). 
 % Quality cuts on the track seeds will be tightened, such as the minimum number of clusters in the VELO or in the tracking stations, or the ``ghost probability'' (a variable gauging the likelihood that a track candidate is a fake). 
 The goal is to restrict to the best quality seeds, so that the combinatorics of patter recognition is kept at a manageable level in the very high track multiplicity of PbPb collisions, even if that means to compromise in terms of track efficiency, especially at very low \pt. In that regard, it would also be possible to reduce the size of the search window used in pattern recognition: this would allow faster reconstruction but restrict to straighter (i.e. higher \pt) tracks.
 The \ER will benefit for this aspect from his experience in CMS, where he has optimised the Regional Iterative Tracking (RegIt), used to enhance the tracking efficiency in \pbpb in a region around reconstructed muons. For this, he has familiarised himself with the tracking algorithms used in CMS, and their difference between \pp and \pbpb.
 %
-Second, the information from the muon stations can be used, in different ways. Muon tracks can be used as seeds and propagated back through the tracking stations (T, see Fig.~\ref{fig:lhcb}), which will allow for smaller search windows (and ignoring the rest of the detector), compared to starting with no seed at all. The other complementary strategy is to match VELO tracks to muon tracks, thus bypassing the T stations, which suffer much more from the high occupancy than the muon stations. Here the idea is to have a higher efficiency for muons, which have a much smaller multiplicity than charged particles in general and are used for measurements involving quarkonia, for instance. For this task the \ER will profit from the expertise of the Cagliari group with muons, both hardware and software.
+Second, the information from the muon stations can be used, in different ways (TRK2). Muon tracks can be used as seeds and propagated back through the tracking stations (T, see Fig.~\ref{fig:lhcb}), which will allow for smaller search windows (and ignoring the rest of the detector), compared to starting with no seed at all. The other complementary strategy is to match VELO tracks to muon tracks, thus bypassing the T stations, which suffer much more from the high occupancy than the muon stations. Here the idea is to have a higher efficiency for muons, which have a much smaller multiplicity than charged particles in general and are used for measurements involving quarkonia, for instance. For this task the \ER will profit from the expertise of the Cagliari group with muons, both hardware and software.
 %
 The \ER will work on these improvements at the same time as getting familiar with the LHCb reconstruction software. Once finalised, he will propose the inclusion of his algorithms in the official LHCb reconstruction software and perform its validation on 2015 \pbpb data and simulation.
 
@@ -414,12 +422,13 @@ The \ER will work on these improvements at the same time as getting familiar wit
 \paragraph{\pPb data analysis: \PgUabc. }\ 
 LHCb will collect \pPb data in November 2016, at $\sqrtsnn = 8\,\TeV$. The measurement of the nuclear modification factor of \PgU mesons, $\rpa (\PgUabc)$, is one of the most important analyses to be performed in this dataset. LHCb benefits from its excellent dimuon mass resolution ($\lesssim 0.5\%$ for $\pt < 100\,\GeVc$), % 11.55MeV for the J/psi according to p84 of https://cds.cern.ch/record/2202169/files/CERN-THESIS-2012-428_2.pdf
 better than any other LHC experiment (and in particular than ALICE in the same rapidity region, $\sim 2.4\%$). %73MeV at the jpsi peak
-The measurement of the same quantity by LHCb with 2013 \pPb data at $\sqrtsnn = 5\,\TeV$ will serve as a baseline for this data analysis. Significant improvements will be possible. First, the collision energy of $\sqrtsnn = 8\,\TeV$ will allow to use the large \pp reference dataset available at the same centre-of-mass energy, allowing for a precise mapping of the $\Upsilon$ mesons modification without having to interpolate results at other energies as had to be done with 2013 \pPb data\footnote{LHCb Collaboration,
-  %``Study of $\Upsilon$ production and cold nuclear matter effects in $p$Pb collisions at $\sqrt{s_{NN}}$=5 TeV,''
-  JHEP {\bf 1407} (2014) 094.
+The measurement of the same quantity by LHCb with 2013 \pPb data at $\sqrtsnn = 5\,\TeV$ will serve as a baseline for this data analysis. Significant improvements will be possible. First, the collision energy of $\sqrtsnn = 8\,\TeV$ will allow to use the large \pp reference dataset available at the same centre-of-mass energy, allowing for a precise mapping of the $\Upsilon$ mesons modification without having to interpolate results at other energies as had to be done with 2013 \pPb data\cref{LHCbupsi}. %\footnotemark[\ref{LHCbupsi}].
+% \footnote{LHCb Collaboration,
+%   %``Study of $\Upsilon$ production and cold nuclear matter effects in $p$Pb collisions at $\sqrt{s_{NN}}$=5 TeV,''
+%   JHEP {\bf 1407} (2014) 094.
 %   doi:10.1007/JHEP07(2014)094
 %   [arXiv:1405.5152 [nucl-ex]].
-  }.
+%   }.
 Second, the much larger dataset (1.6\,\nbinv in 2013, 20\,\nbinv expected in 2016) will allow a much more precise measurement, including the access to the \PgUc, whose \rpa has never been measured so far.
 
 The \ER will lead the effort on this data analysis, being the contact person for the LHCb Collaboration. He will be involved in all parts of the analysis, from defining the selection to evaluating the efficiencies in simulation, producing the results and bringing them to publication. He will collaborate with a PhD student which he will supervise.
@@ -430,10 +439,12 @@ Heavy flavour physics will also be investigated in \pbpb data, taking at the sam
 %
 First, the nuclear modification factor of \Dz mesons will be measured, in the $\Dz \to \K\pi$. The same analysis techniques as used in \pPb\footnote{LHCb Collaboration, LHCb-CONF-2016-003.} will be adapted for \pbpb. Similar \Dz meson measurements are available from the ALICE and CMS experiments, but at central rapidity and, most importantly, not down to 0 \pt, which only LHCb has the possibility to do. The absence of any \pt threshold is crucial as it gives direct access to the full cross section. The possibility to separate
 prompt \Dz mesons from those coming from B meson decays will also be a key ingredient, giving access to an unambiguous measurement of the prompt \Dz as well as an access to the \raa
-of B mesons.
+of B mesons. The simplified method (TRK1) will be applicable in this analysis, extending the centrality reach with respect to what is expected in the current version of the analysis.
 %
-Similarly, the \raa of \Jpsi will be measured, separately for prompt and nonprompt \Jpsi, again with a unique access to 0 \pt (ALICE has access to 0 \pt \Jpsi but cannot separate prompt from nonprompt \Jpsi; CMS can make the latter separation but with a \pt threshold of 3\,\GeVc). The experience of the \ER with \Jpsi measurements in \pbpb
-in CMS will be of key importance. The nonprompt measurements from the \Dz and \Jpsi, arising from the same physics (modification of B mesons in \pbpb), will be compared. The comparison of the \raa of the \pt-inclusive prompt \Jpsi and \Dz, i.e. of hidden to open charm, is also of primary interest as recently underlined\footnote{H. Satz. In: Adv. High Energy Phys. 242918 (2013).}.
+Similarly, the \raa of \Jpsi will be measured, separately for prompt and nonprompt \Jpsi, again with a unique access to 0 \pt (ALICE has access to 0 \pt \Jpsi but cannot separate prompt from nonprompt \Jpsi; CMS can make the latter separation but with a \pt threshold of 3\,\GeVc). 
+% The experience of the \ER with \Jpsi measurements in \pbpb in CMS will be of key importance. 
+The muon tracking method (TRK2) developed by the  \ER will be of key important for this \JPsi measurement, and will make it competitive with the ALICE result in the same rapidity region.
+The nonprompt measurements from the \Dz and \Jpsi, arising from the same physics (modification of B mesons in \pbpb), will be compared. The comparison of the \raa of the \pt-inclusive prompt \Jpsi and \Dz, i.e. of hidden to open charm, is also of primary interest as recently underlined\footnote{H. Satz. In: Adv. High Energy Phys. 242918 (2013).}.
 
 Both the \Dz and \Jpsi analyses will both be first performed using 2015 \pbpb data, re-reconstructed using the improved tracking algorithms developed in the scope of this project. They will then be published using the 2018 data, at the same collision energy but an expected two to ten times higher statistics. The exact involvement of the \ER in these analyses, which require the improved tracking in \pbpb, will depend on the exact time needed by the latter. He will focus in priority on aspects of the analysis directly related to tracking, such as the selection (quality and kinematic cuts) as well as the efficiencies.
 
@@ -852,7 +863,7 @@ visits from all schools of the region.
 
 \subsubsection*{Work Packages description}
 
-\textbf{This project involves 4 work packages (WP)}, following the list of objectives described in Section~\ref{sec:objectives}. \textbf{\textcolor{red}{WP1}} is the development of tracking algorithms suitable for central events. \textbf{\textcolor{blue}{WP2}} is the measurement of upsilon meson production in \pPb data taken in 2016. \textbf{\textcolor{green!50!black}{WP3}} is the analysis of \pbpb data, using the improved tracking algorithms from WP2. The focus will be the measurement of \Dz and prompt and nonprompt \Jpsi in \pbpb. At last, \textbf{\textcolor{magenta}{WP4}} is the participation to the 2018 \PbPb run. More details about the implementation and activities of this work plan are given in Section~\ref{sec:appropriateness}.
+\textbf{This project involves 4 work packages (WP)}, following the list of objectives described in Section~\ref{sec:objectives}. \textbf{\textcolor{red}{WP1}} is the development of tracking algorithms suitable for central events, TRK1 and TRK2. \textbf{\textcolor{blue}{WP2}} is the measurement of upsilon meson production in \pPb data taken in 2016. \textbf{\textcolor{green!50!black}{WP3}} is the analysis of \pbpb data, using the improved tracking algorithms from WP2. The focus will be the measurement of \Dz and prompt and nonprompt \Jpsi in \pbpb. At last, \textbf{\textcolor{magenta}{WP4}} is the participation to the 2018 \PbPb run. More details about the implementation and activities of this work plan are given in Section~\ref{sec:appropriateness}.
 
 % \begin{enumerate}
 %  \item Development of tracking algorithms suitable for central events
@@ -866,8 +877,8 @@ visits from all schools of the region.
 
 \begin{itemize}
  \item \textcolor{red}{M.1.1} Present preliminary tuned tracking for \pbpb to LHCb tracking experts
- \item \textcolor{red}{D.1.1} Tuned tracking algorithms for \pbpb
- \item \textcolor{red}{D.1.2} \pbpb tracking accounting for the muon information
+ \item \textcolor{red}{D.1.1} Tuned tracking algorithms for \pbpb (TRK1)
+ \item \textcolor{red}{D.1.2} \pbpb tracking accounting for the muon information (TRK2)
  \item \textcolor{red}{D.1.3} New \pbpb tracking validated and included in the central LHCb reconstruction software
  \item \textcolor{red}{D.1.4} 2015 data re-reconstructed with the new algorithms
  \item \textcolor{blue}{M.2.1} Start the LHCb internal review of the $\rpa (\PgUn)$ analysis
@@ -974,7 +985,7 @@ stands for \emph{Workshops, conferences, seminars}.\label{fig:gantt}}
 
 The applicant will start working on WP1 (improved tracking algorithms in \pbpb) and WP2 ($\rpa(\PgUn)$ in 2016 \pPb data), also with PhD2. Some work will be needed before reaching the first deliverables of these WP's, but milestones have been defined on the way. While discussions with tracking experts in LHCb will be permanent, an extended status presentation at their meeting (milestone M.1.1) will allow to check what technical choices are valid or not, going towards deliverable D.1.1 (working version of the tuned algorithms for \pbpb). These new algorithms will be tested in \pbpb simulation and 2015 data, but also 2016 \pPb data (with lower occupancies than \pbpb). As far as WP2 is concerned, the equivalent will be the start of the internal review of the analysis (M.2.1), allowing to converge on a solid result. In this respect the \ER could also profit from collaborating with \supervisor who has large expertise with the \PgU analysis at LHCb. Other deliverables will follow for both WP's, as described in Section~\ref{sec:WP}, until the final ones: centrally approved new \pbpb tracking algorithms applied to 2015 \pbpb data for WP1, and submission of a publication on $\rpa(\PgUn)$ for WP2. It should be noted that while the exact timescale for WP1 will depend on the technical issues and solutions encountered during the development of the new tracking algorithms, activities in WP2 follow a safer path and secure the expected publication .
 %
-Once the new tracking algorithms are validated centrally in LHCb (D.1.3), activities in WP3 can start: \pbpb data analysis. Before \pbpb data is taken in 2018, the selection will be defined in simulated samples first (and then centrally re-reconstructed 2015 \pbpb data); this corresponds to D.3.1 and D.3.3, to happen on the same timescale because the selection will follow the same philosophy for the \Dz and \JPsi analyses. Preparation of the 2018 \pbpb data-taking (WP4), meaning in particular the involvement in the definition and preparation of the trigger strategy, will start roughly when work related to WP1 ends. The applicant will go to CERN for this period, together with PhD2, to ease discussion with trigger and detector experts. The \pbpb run itself will happen in November 2018, towards the end of the project, and the \ER will be deeply involved in monitoring triggers and making sure the new \pbpb tracking algorithms he developed behave as expected on the new data. The last months of the project will be dedicated to the analysis of \Dz and nonprompt \JPsi in the 2018 \pbpb data: if possible both, but with priority to the \Dz mesons if time is short.
+Once the new tracking algorithms are validated centrally in LHCb (D.1.3), activities in WP3 can start: \pbpb data analysis. Before \pbpb data is taken in 2018, the selection will be defined in simulated samples first (and then centrally re-reconstructed 2015 \pbpb data); this corresponds to D.3.1 and D.3.3, to happen on the same timescale because the selection will follow the same philosophy for the \Dz and \JPsi analyses (but focusing on TRK1 for \Dz and TRK2 for \JPsi). Preparation of the 2018 \pbpb data-taking (WP4), meaning in particular the involvement in the definition and preparation of the trigger strategy, will start roughly when work related to WP1 ends. The applicant will go to CERN for this period, together with PhD2, to ease discussion with trigger and detector experts. The \pbpb run itself will happen in November 2018, towards the end of the project, and the \ER will be deeply involved in monitoring triggers and making sure the new \pbpb tracking algorithms he developed behave as expected on the new data. The last months of the project will be dedicated to the analysis of \Dz and nonprompt \JPsi in the 2018 \pbpb data: if possible both, but with priority to the \Dz mesons if time is short.
 %
 Throughout the project, the \ER will take part to yearly outreach events, as shown in the Gantt char. He will also present his results at workshops, conferences and seminars.
 
